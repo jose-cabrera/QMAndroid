@@ -8,29 +8,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical" >
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" >
-
-                <Button
-                    android:id="@+id/btnBack"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="right"
-                    android:text="@string/backbutton"
-                    android:textSize="15sp" />
-
-                <Button
-                    android:id="@+id/btnNext"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:text="@string/nextbutton"
-                    android:textSize="15sp" />
-            </RelativeLayout>
+            android:orientation="vertical" >      
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -65,13 +43,47 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <ScrollView
+                android:id="@+id/svQuestionScroll"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" 
-                android:id="@+id/llQuestionsLayout">
+                android:layout_height="wrap_content" >
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/llQuestionsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <Button
+                            android:id="@+id/btnBack"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right"
+                            android:text="@string/backbutton"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:id="@+id/btnNext"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/nextbutton"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
 
         </LinearLayout>
 

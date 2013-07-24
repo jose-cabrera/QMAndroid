@@ -26,13 +26,12 @@ public class SubjectActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		super.setContentView(R.layout.subject_layout);
 		
-		Button btnNext = (Button) findViewById(R.id.btnNext);
+		Button btnNext = (Button) findViewById(R.id.btnNextsa);
 		btnNext.setOnClickListener(new OnClickListener(){
-	        	
-	        	@Override 
-	        	public void onClick(View v){
-	        		
-	        		RadioGroup rgSubjects = (RadioGroup) findViewById(R.id.rgSubjects);
+			
+				@Override
+				public void onClick(View v){
+					RadioGroup rgSubjects = (RadioGroup) findViewById(R.id.rgSubjects);
 	        		int iCheckedRadioButtonId =  rgSubjects.getCheckedRadioButtonId();
 	        		View radioButton = rgSubjects.findViewById(iCheckedRadioButtonId);
 	        		int idx = rgSubjects.indexOfChild(radioButton);
@@ -45,11 +44,10 @@ public class SubjectActivity extends Activity {
 	        			Intent iIntent = new Intent(SubjectActivity.this, EditSubjectActivity.class);
 	        			startActivity(iIntent);
 	        		}
-	        		
-	        	}
-	        } );
+				}
+		});
 		
-		Button btnBack = (Button) findViewById(R.id.btnBack);
+		Button btnBack = (Button) findViewById(R.id.btnBacksa);
 	    btnBack.setOnClickListener(new OnClickListener(){
 	        	
 	        	@Override 

@@ -150,18 +150,27 @@ public class TimerActivity extends Activity {
 		        	@Override 
 		        	public void onClick(View v){
 		        		TimerActivity.super.onBackPressed();
+		        		if(bFlag == false){
+		        			cdtTimer.cancel();
+		        		}	
 		        	}
 		        } );
 	}
 	
 	public void onDestroy(){
 		super.onDestroy();
-		cdtTimer.cancel();
 	}
 	
 	public void onPause(){
 		super.onPause();
-		cdtTimer.cancel();
+	}
+	
+	@Override
+    public void onBackPressed() {
+		TimerActivity.super.onBackPressed();
+		if(bFlag == false){
+			cdtTimer.cancel();
+		}	
 	}
 	
 	int cont = 0;

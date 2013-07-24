@@ -16,6 +16,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.app.Activity;
 import android.content.Context;
@@ -45,20 +46,23 @@ public class QuestionsActivity extends Activity {
 		TextView tvSubjectNumber = (TextView) findViewById(R.id.tvSubjectNumber);
 		tvSubjectNumber.setText(getIntent().getExtras().getString("SubjectId"));
 		
+		
 		smScreen = new ScreenMaker(QuestionsActivity.this);
 		smScreen.Text("This is an info screen. Since this screen is designed only to display information, it expands the text panel and doesn`t have an answer panel");
 		smScreen.EmptySapce(20);
 		smScreen.Text("You can type as much text as you want");	
 		
 		final LinearLayout llQuestion = (LinearLayout) findViewById(R.id.llQuestionsLayout);
+		final ScrollView svScrollView = (ScrollView) findViewById(R.id.svQuestionScroll);
 		
 		imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
 		
 		Button btnBack = (Button) findViewById(R.id.btnBack);
 	    btnBack.setOnClickListener(new OnClickListener(){
-	        	
+
 	        	@Override 
 	        	public void onClick(View v){
+	        		svScrollView.scrollTo(0, 0);
 	        		switch(contador){
 	        		
 	        		case 0://Back
@@ -174,7 +178,8 @@ public class QuestionsActivity extends Activity {
 	    btnNext.setOnClickListener(new OnClickListener(){
 	        	
 	        	@Override 
-	        	public void onClick(View v){//	        		
+	        	public void onClick(View v){//	 
+	        		svScrollView.scrollTo(0, 0);
 	        		switch(contador){
 	        		
 	        		case 0://RadioButtons
@@ -190,7 +195,6 @@ public class QuestionsActivity extends Activity {
 	        		case 1://CheckBox
 	        			llQuestion.removeAllViewsInLayout();
 	        			smScreen.CleanScreen();
-	        			smScreen.GoToTop();
 		        		smScreen.Text("Question number 1. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
 		        		smScreen.EmptySapce(20);
 		        		smScreen.CheckBox(alValues);
@@ -202,7 +206,6 @@ public class QuestionsActivity extends Activity {
 	        		case 2://DatePicker
 	        			llQuestion.removeAllViewsInLayout();
 	        			smScreen.CleanScreen();
-	        			smScreen.GoToTop();
 		        		smScreen.Text("Question number 3 DatePicker. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
 		        		smScreen.EmptySapce(20);
 		        		smScreen.DatePicker();
@@ -215,7 +218,6 @@ public class QuestionsActivity extends Activity {
 	        		case 3://PhoneInput
 	        			llQuestion.removeAllViewsInLayout();
 	        			smScreen.CleanScreen();
-	        			smScreen.GoToTop();
 		        		smScreen.Text("Question number 4 PhoneInput");
 		        		smScreen.EmptySapce(20);
 		        		smScreen.PhoneInput();
@@ -241,7 +243,6 @@ public class QuestionsActivity extends Activity {
 	        		case 5://TextInput
 	        			llQuestion.removeAllViewsInLayout();
 	        			smScreen.CleanScreen();
-	        			smScreen.GoToTop();
 		        		smScreen.Text("Question number 6 TextInput");
 		        		smScreen.EmptySapce(20);
 		        		smScreen.TextInput();
@@ -266,7 +267,6 @@ public class QuestionsActivity extends Activity {
 	        		case 7://DateTimePicker
 	        			llQuestion.removeAllViewsInLayout();
 	        			smScreen.CleanScreen();
-	        			smScreen.GoToTop();
 		        		smScreen.Text("Question number 8 DateTime");
 		        		smScreen.EmptySapce(20);
 		        		smScreen.DateTimePicker();
@@ -362,7 +362,6 @@ public class QuestionsActivity extends Activity {
 			case 6://TextInput
     			llQuestion.removeAllViewsInLayout();
     			smScreen.CleanScreen();
-    			smScreen.GoToTop();
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
         		smScreen.TextInput();
@@ -454,6 +453,8 @@ public class QuestionsActivity extends Activity {
 	@Override
     public void onBackPressed() {
 		final LinearLayout llQuestion = (LinearLayout) findViewById(R.id.llQuestionsLayout);
+		ScrollView svScrollView = (ScrollView) findViewById(R.id.svQuestionScroll);
+		svScrollView.scrollTo(0, 0);
 		switch(contador){
 		
 		case 0://Back

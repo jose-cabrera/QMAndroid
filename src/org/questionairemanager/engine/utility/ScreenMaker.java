@@ -34,7 +34,6 @@ public class ScreenMaker {
      */
 		private Context ctCtx;
 		private LinearLayout lyPrincipal, lyContent;
-		private ScrollView svScroll;
 		View vEmptySpace;
 		TextView tvKey, tvValue, tvQuestion, tvText, tvLatitude, tvLongitude, tvAltitude, tvBearing, tvSpeed, tvHelpText;
 		EditText etTextInput, etNumberInput, etDateTimeInput, etDecimalNumberInput, etTimeInput, etPhoneInput, etTextArea;
@@ -58,21 +57,11 @@ public class ScreenMaker {
 			lyContent = new LinearLayout(ctx);
 			lyContent.setOrientation(LinearLayout.VERTICAL);
 			lyContent.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
-
-			svScroll = new ScrollView(ctx);
-			svScroll.setVerticalScrollBarEnabled(true);
-			svScroll.setScrollbarFadingEnabled(false);
-			svScroll.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
 		}
 		
 		public void CleanScreen(){
 			lyContent.removeAllViewsInLayout();
 			lyPrincipal.removeAllViewsInLayout();
-			svScroll.removeAllViewsInLayout();
-		}
-		
-		public void GoToTop(){
-			svScroll.scrollTo(0, 0);
 		}
 
     /**
@@ -394,9 +383,7 @@ public class ScreenMaker {
      * @return lyPrincial, it returns the layaout with the scroll view and the content layout with all the view add to it
      */
 		public LinearLayout MakeScreen(){
-			svScroll.addView(lyContent);
-			lyPrincipal.addView(svScroll);
-			svScroll.scrollTo(0, 0);
+			lyPrincipal.addView(lyContent);
 			return lyPrincipal;
 		}
 }
