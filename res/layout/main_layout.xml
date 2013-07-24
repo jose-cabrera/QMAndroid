@@ -1,19 +1,127 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-	android:orientation="vertical" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:id="@+id/Layout"
+    android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView">
 
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText"
-            android:layout_gravity="center"
-            android:inputType="numberDecimal"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
 
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                <Button
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:text="@string/exitbutton"
+                        android:id="@+id/btnExit"
+                        android:layout_gravity="right"
+                        android:textSize="15sp"/>
+
+                <Button
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:text="@string/login"
+                        android:id="@+id/btnLogIn"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:textSize="15sp"/>
+            </RelativeLayout>
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/tvStudyNameLong"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/tvStudyNameShort"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/log_in_screen"
+                    android:id="@+id/textView3"
+                    android:textColor="#ff315a"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/select_the_inteviewer_s_code"
+                    android:id="@+id/textView4"
+                    android:gravity="center"/>
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/code_"
+                        android:id="@+id/textView5"
+                        android:singleLine="false"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"/>
+
+                <Spinner
+                        android:layout_width="200dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/sCode"
+                        android:layout_marginRight="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/password_"
+                        android:id="@+id/tvPassword"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"/>
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:ems="10"
+                    android:inputType="textPassword" >
+
+                    <requestFocus />
+                </EditText>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
+

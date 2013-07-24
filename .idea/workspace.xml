@@ -2,18 +2,308 @@
 <project version="4">
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
-      <GlobalState />
+      <GlobalState>
+        <option name="visible" value="false" />
+      </GlobalState>
     </option>
   </component>
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <target>android-17</target>
+      </config>
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/res/layout/main_layout.xml">
+        <config>
+          <device>Nexus 4</device>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1e5f848-e32c-4453-b983-dab2aff32092" name="Default" comment="" />
     <ignored path="QMAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/wallpaper_intra_close_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/activity_close_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_plus_90_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/accelerate_interpolator.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/push_down_out.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/shrink_fade_out_center.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_start_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/dock_top_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/task_open_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/lock_screen_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/dock_bottom_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/task_close_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671897" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_start_frame.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/lock_screen_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/keyguard_action_assist_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/submenu_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_start_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_user_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/dialog_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/wallpaper_open_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/wallpaper_intra_close_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/options_panel_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/activity_close_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/fast_fade_in.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/wallpaper_intra_open_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/slide_out_down.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_user_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/window_move_from_decor.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/accelerate_decelerate_interpolator.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/search_bar_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/grow_fade_in.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/fast_fade_out.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/menu/webview_copy.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/menu/webview_find.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/secondary_text_light.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_focused_holo_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/secondary_text_nodisable_holo_light.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/tertiary_text_holo_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_nodisable_holo_light.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/secondary_text_light_nodisable.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/tertiary_text_holo_light.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_dark_focused.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/secondary_text_nodisable_holo_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_holo_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_nodisable_holo_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/tertiary_text_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/widget_edittext_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_disable_only_holo_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_light_disable_only.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_dark_disable_only.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_dark_nodisable.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/secondary_text_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_disable_only_holo_light.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/secondary_text_holo_dark.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_holo_light.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/tertiary_text_light.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_light.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/secondary_text_dark_nodisable.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/tab_indicator_text.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/secondary_text_holo_light.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/primary_text_light_nodisable.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/search_url_text_holo.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/search_url_text.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/tab_indicator_text_v4.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/color/secondary_text_nofocus.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671898" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/alert_dialog_holo.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/number_picker.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/power_dialog.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/auto_complete_list.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/keyguard_message_area.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/menu_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/resolver_grid.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/keyguard_pin_view.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/screen_custom_title.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/choose_account_type.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/calendar_view.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/preference.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/heavy_weight_switcher.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/keyguard.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/action_bar_title_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/app_perms_summary.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/search_view.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/dialog_title_holo.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/ssl_certificate.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/progress_dialog.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/dialog_title_icons.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/keyguard_add_widget.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/expanded_menu_layout.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/simple_spinner_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/choose_account.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/character_picker.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/activity_chooser_view.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/time_picker.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/global_actions_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/zoom_container.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/date_picker_dialog.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/search_bar.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/select_dialog.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/simple_list_item_1.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/action_bar_home.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/keyguard_status_view.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/screen_title.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/date_picker_holo.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/list_content.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/notification_action.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/preference_child.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/date_picker.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/simple_dropdown_hint.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/js_prompt.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/recent_apps_icon.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/keyboard_key_preview.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/choose_account_row.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/simple_gallery_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/launch_warning.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/dialog_custom_title.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/textview_hint.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/simple_list_item_2.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/wifi_p2p_dialog_row.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/screen.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/tab_indicator_holo.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/text_drag_thumbnail.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/locale_picker_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/action_mode_bar.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671899" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/volume_adjust.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/list_content_simple.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/alert_dialog.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/activity_list_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/icon_menu_item_layout.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/preference_category.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/action_menu_layout.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/keyguard_account_view.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/list_menu_item_radio.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/typing_filter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/webview_find.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/select_dialog_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/keyguard_screen_lock.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/safe_mode.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/always_use_checkbox.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/app_permission_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/screen_simple.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/alert_dialog_progress.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/test_list_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/activity_list.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/dialog_title.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/list_menu_item_icon.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/tab_content.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/web_runtime.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/twelve_key_entry.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/progress_dialog_holo.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/wifi_p2p_dialog.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/zoom_controls.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/password_kbd_symbols_shift.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/kg_password_kbd_numeric.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/seekbar_dialog.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/power_profile.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/time_zones_by_country.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/am_compat_mode_dialog.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/eri.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/preferred_time_zones.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/activity_list_item_2.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/apns.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/tab_indicator.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/password_kbd_symbols.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/password_kbd_qwerty.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/password_kbd_numeric.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/password_kbd_extension.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/preferences.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/sms_short_codes.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/screen_title_icons.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/password_kbd_qwerty_shifted.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/media_controller.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/password_kbd_popup_template.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/storage_list.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/xml/autotext.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/shrink_fade_out_from_bottom.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/time_picker_dialog.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/recents_fade_out.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671900" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/usb_storage_activity.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/shrink_fade_out.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/wallpaper_open_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/keyguard_security_fade_out.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_minus_90_frame.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/anticipate_overshoot_interpolator.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/resolve_list_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/toast_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/screen_progress.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/wallpaper_intra_open_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/time_picker_holo.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_180_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/two_line_list_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/push_down_out_no_alpha.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/task_close_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/dock_bottom_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/input_method_extract_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/slide_in_right.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/search_bar_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/wallpaper_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/input_method_extract_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/options_panel_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/zoom_magnify.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/overshoot_interpolator.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/keyguard_security_animate_out.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/keyguard_pattern_view.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/push_down_in.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/screen_action_bar.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/dock_right_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/push_down_in_no_alpha.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/push_up_out.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_plus_90_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/volume_adjust_item.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/activity_open_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/default_navigation.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_0_frame.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/dock_left_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/select_dialog_holo.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_plus_90_frame.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/bounce_interpolator.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/input_method_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_0_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/fragment_bread_crumbs.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/dock_right_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/recent_apps_dialog.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/dialog_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/grow_fade_in_center.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/linear_interpolator.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/slide_out_right.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/slide_out_left.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/input_method.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/recent_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/input_method_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/layout/preference_holo.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671901" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/translucent_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/task_open_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/cycle_interpolator.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_minus_90_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/wallpaper_close_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/slide_in_up.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/decelerate_interpolator.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/fade_in.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/anticipate_interpolator.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/wallpaper_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/recents_fade_in.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/dock_left_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_180_frame.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_180_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/input_method_fancy_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/toast_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/fade_out.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_0_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/keyguard_action_assist_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/lock_screen_wallpaper_behind_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/slide_in_child_bottom.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/input_method_fancy_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/wallpaper_close_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/slow_fade_in.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/recent_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/keyguard_security_fade_in.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_finish_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/push_up_in.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/activity_open_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/translucent_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/slide_in_left.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_finish_frame.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/grow_fade_in_from_bottom.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_finish_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/dock_top_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/screen_rotate_minus_90_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/lock_screen_behind_enter.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/keyguard_security_animate_in.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/submenu_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/sdk/platforms/android-17/data/res/anim/app_starting_exit.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372691671902" ignored="false" />
+    <file path="/main_layout.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372700591587" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/plugins/android/lib/android.jar!/org/jetbrains/android/android.xsd" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372693609447" ignored="false" />
+    <file path="/strings.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372694598541" ignored="false" />
+    <file path="/MainActivity.java" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372702323711" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372701712402" ignored="false" />
+    <file path="$PROJECT_DIR$/bin/AndroidManifest.xml" changelist="b1e5f848-e32c-4453-b983-dab2aff32092" time="1372702120910" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +311,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -77,18 +372,16 @@
       <file leaf-file-name="ScreenFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/fragment/ScreenFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="26" column="0" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScreenMaker.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ScreenMaker.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/utility/ScreenMaker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.01655629" vertical-offset="0" max-vertical-offset="2025">
+            <state line="124" column="57" selection-start="5134" selection-end="5134" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,7 +393,39 @@
             <state />
           </provider>
           <provider editor-type-id="text-editor">
-            <state line="16" column="12" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="375">
+            <state line="125" column="51" selection-start="5129" selection-end="5129" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#928#948#0" expanded="true" />
+                <element signature="e#1271#1291#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="51" selection-start="323" selection-end="323" vertical-scroll-proportion="0.1821192">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="43" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="35" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,6 +439,11 @@
     </FindUsagesManager>
   </component>
   <component name="GradleLocalSettings">
+    <option name="tasksExpandState">
+      <map>
+        <entry key="" value="true" />
+      </map>
+    </option>
     <option name="availableProjects">
       <map>
         <entry>
@@ -140,9 +470,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/org/questionairemanager/engine/fragment/ScreenFragment.java" />
         <option value="$PROJECT_DIR$/src/org/questionairemanager/engine/utility/ScreenMaker.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/main_layout.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/org/questionairemanager/engine/MainActivity.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
@@ -175,7 +511,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,6 +604,100 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-v14" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-v11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-sw720dp-land" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-sw600dp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -288,21 +717,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QMAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.QMAndroid">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -413,37 +884,42 @@
       <changelist id="b1e5f848-e32c-4453-b983-dab2aff32092" name="Default" comment="" />
       <created>1372175034992</created>
       <updated>1372175034992</updated>
+      <workItem from="1372691652286" duration="8641000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8641000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1054" extended-state="6" />
+    <frame x="0" y="22" width="1920" height="1054" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18516542" sideWeight="0.28586724" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18516542" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18516542" sideWeight="0.6702356" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32976446" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -507,26 +983,30 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/app/Fragment.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="29" selection-start="4404" selection-end="4404" vertical-scroll-proportion="0.33333334" vertical-offset="1258" max-vertical-offset="2625">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/layout/main_layout.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="876" selection-end="876" vertical-scroll-proportion="0.44701988" vertical-offset="0" max-vertical-offset="906">
-          <folding />
+      <provider editor-type-id="text-editor">
+        <state line="9" column="30" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#928#948#0" expanded="true" />
+            <element signature="e#1271#1291#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/fragment/ScreenFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="14" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/utility/ScreenMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="57" selection-start="5151" selection-end="5151" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -535,15 +1015,107 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state line="16" column="12" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+        <state line="10" column="30" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#928#948#0" expanded="true" />
+            <element signature="e#1271#1291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/fragment/ScreenFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/utility/ScreenMaker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.01655629" vertical-offset="0" max-vertical-offset="2025">
+        <state line="92" column="35" selection-start="4021" selection-end="4021" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/fragment/ScreenFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/utility/ScreenMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main_layout.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="16" column="12" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#928#948#0" expanded="true" />
+            <element signature="e#1271#1291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/app/Fragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="29" selection-start="4404" selection-end="4404" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/fragment/ScreenFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/utility/ScreenMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="57" selection-start="5134" selection-end="5134" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="35" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main_layout.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="125" column="51" selection-start="5129" selection-end="5129" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#928#948#0" expanded="true" />
+            <element signature="e#1271#1291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="43" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/questionairemanager/engine/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="51" selection-start="323" selection-end="323" vertical-scroll-proportion="0.1821192">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
