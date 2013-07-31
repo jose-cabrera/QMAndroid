@@ -77,6 +77,7 @@ public class MainActivity extends Activity {
     	switch (miItem.getItemId()) {
         case R.id.menu_gps:
         	Intent iIntent = new Intent(MainActivity.this, GPSActivity.class);
+        	iIntent.putExtra("IdOrigin", ""+0);
     		startActivity(iIntent);
     		return true;
          
@@ -84,6 +85,12 @@ public class MainActivity extends Activity {
         	Intent iIntentTimer = new Intent(MainActivity.this, TimerActivity.class);
     		startActivity(iIntentTimer);
     		return true;
+    		
+        case R.id.menu_barcodereader:
+        	Intent iIntentBarCode = new Intent(MainActivity.this, BarCodeReaderActivity.class);
+        	iIntentBarCode.putExtra("IdOrigin", ""+0);
+    		startActivity(iIntentBarCode);
+    		return true;	
         
         case R.id.menu_change_subject:
         	showMsg.instantMessage("CHANGE SUBJECT", this);
@@ -95,6 +102,11 @@ public class MainActivity extends Activity {
         	
         case R.id.menu_logout:
         	showMsg.instantMessage("LOGOUT", this);
+        	return true;
+        	
+        case R.id.menu_reports:
+        	Intent iIntentReport = new Intent(MainActivity.this, ReportsActivity.class);
+    		startActivity(iIntentReport);
         	return true;
        
         default:

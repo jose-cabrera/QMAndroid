@@ -3,6 +3,7 @@ package org.questionairemanager.engine;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.questionairemanager.engine.utility.LoadingDialog;
 import org.questionairemanager.engine.utility.ScreenMaker;
 import org.questionairemanager.engine.utility.ShowMessage;
 
@@ -27,10 +28,12 @@ public class QuestionsActivity extends Activity {
 	ShowMessage showMsg = new ShowMessage();
 	ScreenMaker smScreen;
 	MenuItem miItem;
-	int iTools = 0;
-	int contador = 0;
+	int iTools = 0, contador = 0, IdOriginQuestion=2;
 	InputMethodManager imm;
 	EditText etTextInputValue, etPhoneInputValue, etNumberInputValue, etTextAreaValue;
+	Button btnBack, btnNext;
+	
+	LoadingDialog ldLoader;
 	
 	String[] alValues = {"Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an.", "item2", "Homero salutatus suscipiantur eum id, tamquam voluptaria expetendis ad sed, nobis feugiat similique usu ex.", "item4", "Legere expetenda pertinacia ne pro, et pro impetus persius assueverit.", "Pro ex putant deleniti repudiare, vel an aperiam sensibus suavitate.", "Eos mutat ullum forensibus ex, wisi perfecto urbanitas cu eam, no vis dicunt impetus.", "At has veri feugait placerat, in semper offendit praesent his. Omnium impetus facilis sed at, ex viris tincidunt ius. Unum eirmod dignissim id quo. Sit te atomorum quaerendum neglegentur, his primis tamquam et."};
 	
@@ -40,24 +43,46 @@ public class QuestionsActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 		setContentView(R.layout.questions_layout);
 		
 		TextView tvSubjectNumber = (TextView) findViewById(R.id.tvSubjectNumber);
+		btnNext = (Button) findViewById(R.id.btnNext);
+		btnBack = (Button) findViewById(R.id.btnBack);
+		ldLoader = new LoadingDialog(this);
+		
 		tvSubjectNumber.setText(getIntent().getExtras().getString("SubjectId"));
-		
-		
-		smScreen = new ScreenMaker(QuestionsActivity.this);
-		smScreen.Text("This is an info screen. Since this screen is designed only to display information, it expands the text panel and doesn`t have an answer panel");
-		smScreen.EmptySapce(20);
-		smScreen.Text("You can type as much text as you want");	
-		
+		try{
+			IdOriginQuestion = Integer.parseInt(getIntent().getExtras().getString("IdOriginQuestion"));
+		}
+		catch(Exception e){
+			IdOriginQuestion = 2;
+		}
+	    if(IdOriginQuestion == 0){
+	    	Intent iIntent = new Intent(QuestionsActivity.this, BarCodeReaderActivity.class);
+			iIntent.putExtra("IdOrigin", ""+1);
+;	        startActivity(iIntent);
+			contador=10;
+	    }
+	    if(IdOriginQuestion == 1){
+	    	smScreen = new ScreenMaker(QuestionsActivity.this);
+			smScreen.Text("This is a Final Screen");
+			smScreen.EmptySapce(20);
+			smScreen.Text("The end of the questionarie");
+			contador=11;
+	    }
+	    else{
+	    	smScreen = new ScreenMaker(QuestionsActivity.this);
+			smScreen.Text("This is an info screen. Since this screen is designed only to display information, it expands the text panel and doesn`t have an answer panel");
+			smScreen.EmptySapce(20);
+			smScreen.Text("You can type as much text as you want");	
+	    }
+				
 		final LinearLayout llQuestion = (LinearLayout) findViewById(R.id.llQuestionsLayout);
 		final ScrollView svScrollView = (ScrollView) findViewById(R.id.svQuestionScroll);
 		
 		imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
 		
-		Button btnBack = (Button) findViewById(R.id.btnBack);
+		
 	    btnBack.setOnClickListener(new OnClickListener(){
 
 	        	@Override 
@@ -167,14 +192,26 @@ public class QuestionsActivity extends Activity {
 		        		imm.hideSoftInputFromWindow(etTextAreaValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 	            		llQuestion.addView(smScreen.MakeScreen());
 	        			contador--;
-	        			break;	
+	        			break;		
 	        			
+	        		case 10://GPS
+	        			Intent iIntent = new Intent(QuestionsActivity.this, GPSActivity.class);
+	        			iIntent.putExtra("IdOrigin", ""+1);
+	        			startActivity(iIntent);
+	        			contador--;
+	        			break;
+	        			
+	        		case 11://BarCodeReader
+	        			Intent iIntentBarCode = new Intent(QuestionsActivity.this, BarCodeReaderActivity.class);
+	        			iIntentBarCode.putExtra("IdOrigin", ""+1);
+	        			startActivity(iIntentBarCode);
+	        			contador--;
+	        			break;
 	        		
 	        		}
 	        	}
 	        } );
-	    
-	    Button btnNext = (Button) findViewById(R.id.btnNext);
+	    	    
 	    btnNext.setOnClickListener(new OnClickListener(){
 	        	
 	        	@Override 
@@ -285,6 +322,24 @@ public class QuestionsActivity extends Activity {
 		        		llQuestion.addView(smScreen.MakeScreen());
 	        			contador=9;
 	        			break;		
+	        		
+	        		case 9://GPS
+	        			Intent iIntent = new Intent(QuestionsActivity.this, GPSActivity.class);
+	        			iIntent.putExtra("IdOrigin", ""+1);
+	        			startActivity(iIntent);
+	        			contador=10;
+	        			break;
+	        			
+	        		case 10:
+	        			Intent iIntentBarCode = new Intent(QuestionsActivity.this, BarCodeReaderActivity.class);
+	        			iIntentBarCode.putExtra("IdOrigin", ""+1);
+	        			startActivity(iIntentBarCode);
+	        			contador=11;
+	        			break;
+	        			
+	        		case 11:
+	        			ldLoader.showSpinnerLoading();
+	        			break;
 	        		
 	        		}
 	        		
@@ -456,110 +511,124 @@ public class QuestionsActivity extends Activity {
 		ScrollView svScrollView = (ScrollView) findViewById(R.id.svQuestionScroll);
 		svScrollView.scrollTo(0, 0);
 		switch(contador){
-		
-		case 0://Back
-			QuestionsActivity.super.onBackPressed();
-			break;
-			
-		case 1:
-			llQuestion.removeAllViewsInLayout();
-			smScreen.CleanScreen();
-			smScreen.Text("This is an info screen. Since this screen is designed only to display information, it expands the text panel and doesn`t have an answer panel");
-			smScreen.EmptySapce(20);
-			smScreen.Text("You can type as much text as you want");
-			llQuestion.addView(smScreen.MakeScreen());
-			contador=0;
-			break;
-				
-		case 2://RadioButtons
-			llQuestion.removeAllViewsInLayout();
-			smScreen.CleanScreen();
-    		smScreen.Text("Question number 0. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
-    		smScreen.EmptySapce(20);
-    		smScreen.RadioButtons(alValues);	
-    		llQuestion.addView(smScreen.MakeScreen());
-    		contador--;
-			break;
-			
-		case 3://Checkbox
-			llQuestion.removeAllViewsInLayout();
-			smScreen.CleanScreen();
-    		smScreen.Text("Question number 1. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
-    		smScreen.EmptySapce(20);
-    		smScreen.CheckBox(alValues);
-    		llQuestion.addView(smScreen.MakeScreen());
-    		contador--;
-			break;
-				        		
-		case 4://DatePicker
-			llQuestion.removeAllViewsInLayout();
-			smScreen.CleanScreen();
-    		smScreen.Text("Question number 3 DatePicker. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
-    		smScreen.EmptySapce(20);
-    		smScreen.DatePicker();
-    		etPhoneInputValue = (EditText) smScreen.getPhoneInputValue();
-    		imm.hideSoftInputFromWindow(etPhoneInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-    		llQuestion.addView(smScreen.MakeScreen());
-			contador--;
-			break;
-		
-		case 5://PhoneInput
-			llQuestion.removeAllViewsInLayout();
-			smScreen.CleanScreen();
-    		smScreen.Text("Question number 4 PhoneInput");
-    		smScreen.EmptySapce(20);
-    		smScreen.PhoneInput();
-    		etPhoneInputValue = (EditText) smScreen.getPhoneInputValue();
-    		imm.hideSoftInputFromWindow(etPhoneInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-    		llQuestion.addView(smScreen.MakeScreen());
-			contador--;
-			break;
-			
-		case 6://NumberInput
-			llQuestion.removeAllViewsInLayout();
-			smScreen.CleanScreen();
-    		smScreen.Text("Question number 5 NumberInput");
-    		smScreen.EmptySapce(20);
-    		smScreen.NumberInput();
-    		etNumberInputValue = (EditText) smScreen.getNumberInputValue();
-    		imm.hideSoftInputFromWindow(etNumberInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-    		llQuestion.addView(smScreen.MakeScreen());
-			contador--;
-			break;
-			
-		case 7://TextInput
-			llQuestion.removeAllViewsInLayout();
-			smScreen.CleanScreen();
-    		smScreen.Text("Question number 6 TextInput");
-    		smScreen.EmptySapce(20);
-    		smScreen.TextInput();
-    		etTextInputValue = (EditText) smScreen.getTextInputValue();
-    		imm.hideSoftInputFromWindow(etTextInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-    		llQuestion.addView(smScreen.MakeScreen());
-			contador--;
-			break;	
-			
-		case 8://TimePicker
-			llQuestion.removeAllViewsInLayout();
-			smScreen.CleanScreen();
-    		smScreen.Text("Question number 7 Time");
-    		smScreen.EmptySapce(20);
-    		smScreen.TimePicker();
-    		llQuestion.addView(smScreen.MakeScreen());
-			contador--;
-			break;	
-			
-		case 9://DateTimePicker
-			llQuestion.removeAllViewsInLayout();
-			smScreen.CleanScreen();
-    		smScreen.Text("Question number 8 DateTime");
-    		smScreen.EmptySapce(20);
-    		smScreen.DateTimePicker();
-    		etTextAreaValue = (EditText) smScreen.getTextAreaValue();
-    		imm.hideSoftInputFromWindow(etTextAreaValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-    		llQuestion.addView(smScreen.MakeScreen());
-			contador--;
-			break;	
+
+    		case 0://Back
+    			QuestionsActivity.super.onBackPressed();
+    			break;
+    			
+    		case 1:
+    			llQuestion.removeAllViewsInLayout();
+    			smScreen.CleanScreen();
+    			smScreen.Text("This is an info screen. Since this screen is designed only to display information, it expands the text panel and doesn`t have an answer panel");
+    			smScreen.EmptySapce(20);
+    			smScreen.Text("You can type as much text as you want");
+    			llQuestion.addView(smScreen.MakeScreen());
+    			contador=0;
+    			break;
+    				
+    		case 2://RadioButtons
+    			llQuestion.removeAllViewsInLayout();
+    			smScreen.CleanScreen();
+        		smScreen.Text("Question number 0. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
+        		smScreen.EmptySapce(20);
+        		smScreen.RadioButtons(alValues);	
+        		llQuestion.addView(smScreen.MakeScreen());
+        		contador--;
+    			break;
+    			
+    		case 3://Checkbox
+    			llQuestion.removeAllViewsInLayout();
+    			smScreen.CleanScreen();
+        		smScreen.Text("Question number 1. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
+        		smScreen.EmptySapce(20);
+        		smScreen.CheckBox(alValues);
+        		llQuestion.addView(smScreen.MakeScreen());
+        		contador--;
+    			break;
+    				        		
+    		case 4://DatePicker
+    			llQuestion.removeAllViewsInLayout();
+    			smScreen.CleanScreen();
+        		smScreen.Text("Question number 3 DatePicker. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
+        		smScreen.EmptySapce(20);
+        		smScreen.DatePicker();
+        		etPhoneInputValue = (EditText) smScreen.getPhoneInputValue();
+        		imm.hideSoftInputFromWindow(etPhoneInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        		llQuestion.addView(smScreen.MakeScreen());
+    			contador--;
+    			break;
+    		
+    		case 5://PhoneInput
+    			llQuestion.removeAllViewsInLayout();
+    			smScreen.CleanScreen();
+        		smScreen.Text("Question number 4 PhoneInput");
+        		smScreen.EmptySapce(20);
+        		smScreen.PhoneInput();
+        		etPhoneInputValue = (EditText) smScreen.getPhoneInputValue();
+        		imm.hideSoftInputFromWindow(etPhoneInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        		llQuestion.addView(smScreen.MakeScreen());
+    			contador--;
+    			break;
+    			
+    		case 6://NumberInput
+    			llQuestion.removeAllViewsInLayout();
+    			smScreen.CleanScreen();
+        		smScreen.Text("Question number 5 NumberInput");
+        		smScreen.EmptySapce(20);
+        		smScreen.NumberInput();
+        		etNumberInputValue = (EditText) smScreen.getNumberInputValue();
+        		imm.hideSoftInputFromWindow(etNumberInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        		llQuestion.addView(smScreen.MakeScreen());
+    			contador--;
+    			break;
+    			
+    		case 7://TextInput
+    			llQuestion.removeAllViewsInLayout();
+    			smScreen.CleanScreen();
+        		smScreen.Text("Question number 6 TextInput");
+        		smScreen.EmptySapce(20);
+        		smScreen.TextInput();
+        		etTextInputValue = (EditText) smScreen.getTextInputValue();
+        		imm.hideSoftInputFromWindow(etTextInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        		llQuestion.addView(smScreen.MakeScreen());
+    			contador--;
+    			break;	
+    			
+    		case 8://TimePicker
+    			llQuestion.removeAllViewsInLayout();
+    			smScreen.CleanScreen();
+        		smScreen.Text("Question number 7 Time");
+        		smScreen.EmptySapce(20);
+        		smScreen.TimePicker();
+        		llQuestion.addView(smScreen.MakeScreen());
+    			contador--;
+    			break;	
+    			
+    		case 9://DateTimePicker
+    			llQuestion.removeAllViewsInLayout();
+    			smScreen.CleanScreen();
+        		smScreen.Text("Question number 8 DateTime");
+        		smScreen.EmptySapce(20);
+        		smScreen.DateTimePicker();
+        		etTextAreaValue = (EditText) smScreen.getTextAreaValue();
+        		imm.hideSoftInputFromWindow(etTextAreaValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        		llQuestion.addView(smScreen.MakeScreen());
+    			contador--;
+    			break;		
+    			
+    		case 10://GPS
+    			Intent iIntent = new Intent(QuestionsActivity.this, GPSActivity.class);
+    			iIntent.putExtra("IdOrigin", ""+1);
+    			startActivity(iIntent);
+    			contador--;
+    			break;
+    			
+    		case 11://BarCodeReader
+    			Intent iIntentBarCode = new Intent(QuestionsActivity.this, BarCodeReaderActivity.class);
+    			iIntentBarCode.putExtra("IdOrigin", ""+1);
+    			startActivity(iIntentBarCode);
+    			contador--;
+    			break;
 		
 		}
         return;
@@ -585,6 +654,12 @@ public class QuestionsActivity extends Activity {
         	Intent iIntentTimer = new Intent(QuestionsActivity.this, TimerActivity.class);
     		startActivity(iIntentTimer);
     		return true;
+    		
+        case R.id.menu_barcodereader:
+        	Intent iIntentBarCode = new Intent(QuestionsActivity.this, BarCodeReaderActivity.class);
+        	iIntentBarCode.putExtra("IdOrigin", ""+0);
+    		startActivity(iIntentBarCode);
+    		return true;		
         
         case R.id.menu_change_subject:
         	showMsg.instantMessage("CHANGE SUBJECT", this);
@@ -597,6 +672,11 @@ public class QuestionsActivity extends Activity {
         case R.id.menu_logout:
         	showMsg.instantMessage("LOGOUT", this);
         	return true;
+        	
+        case R.id.menu_reports:
+        	Intent iIntentReport = new Intent(QuestionsActivity.this, ReportsActivity.class);
+    		startActivity(iIntentReport);
+        	return true;		
        
         default:
         	return super.onOptionsItemSelected(miItem);

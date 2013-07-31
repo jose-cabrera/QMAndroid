@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <item android:id="@+id/menu_tools"
+          android:title="@string/tools" >
+        <!-- "file" submenu -->
+        <menu>
+            <item android:id="@+id/menu_gps"
+                  android:title="@string/gps" />
+            <item android:id="@+id/menu_timer"
+                  android:title="@string/timer" />
+             <item android:id="@+id/menu_barcodereader"
+                  android:title="@string/barcode_reader" />
+        </menu>
+        </item>
+        <item android:id="@+id/menu_change_subject"
+          android:title="@string/change_subject" />
+        <item android:id="@+id/menu_change_study"
+          android:title="@string/change_study" />
+        <item android:id="@+id/menu_logout"
+          android:title="@string/logout" />        
+</menu>

@@ -78,6 +78,12 @@ public class SubjectActivity extends Activity {
         	Intent iIntentTimer = new Intent(SubjectActivity.this, TimerActivity.class);
     		startActivity(iIntentTimer);
     		return true;
+    		
+        case R.id.menu_barcodereader:
+        	Intent iIntentBarCode = new Intent(SubjectActivity.this, BarCodeReaderActivity.class);
+        	iIntentBarCode.putExtra("IdOrigin", ""+0);
+    		startActivity(iIntentBarCode);
+    		return true;		
         
         case R.id.menu_change_subject:
         	showMsg.instantMessage("CHANGE SUBJECT", this);
@@ -90,6 +96,11 @@ public class SubjectActivity extends Activity {
         case R.id.menu_logout:
         	showMsg.instantMessage("LOGOUT", this);
         	return true;
+        	
+        case R.id.menu_reports:
+        	Intent iIntentReport = new Intent(SubjectActivity.this, ReportsActivity.class);
+    		startActivity(iIntentReport);
+        	return true;		
        
         default:
         	return super.onOptionsItemSelected(miItem);

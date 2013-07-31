@@ -4,8 +4,7 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk
-        android:minSdkVersion="10"/>
+    <uses-sdk android:minSdkVersion="10" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -19,8 +18,8 @@
         <activity
             android:name="org.questionairemanager.engine.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard"
-            android:label="@string/app_name" 
-            android:windowSoftInputMode="stateHidden">
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,26 +29,26 @@
         <activity
             android:name="org.questionairemanager.engine.SubjectActivity"
             android:configChanges="orientation|keyboardHidden|keyboard"
-            android:label="@string/title_activity_subject" 
-            android:windowSoftInputMode="stateHidden">
+            android:label="@string/title_activity_subject"
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name="org.questionairemanager.engine.AddSubjectActivity"
             android:configChanges="orientation|keyboardHidden|keyboard"
-            android:label="@string/title_activity_add_subject" 
-            android:windowSoftInputMode="stateHidden">
+            android:label="@string/title_activity_add_subject"
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name="org.questionairemanager.engine.EditSubjectActivity"
             android:configChanges="orientation|keyboardHidden|keyboard"
-            android:label="@string/title_activity_edit_subject" 
-            android:windowSoftInputMode="stateHidden">
+            android:label="@string/title_activity_edit_subject"
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name="org.questionairemanager.engine.QuestionsActivity"
             android:configChanges="orientation|keyboardHidden|keyboard"
-            android:label="@string/title_activity_questions" 
-            android:windowSoftInputMode="stateHidden">
+            android:label="@string/title_activity_questions"
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name="org.questionairemanager.engine.GPSActivity"
@@ -65,6 +64,18 @@
             android:name="org.questionairemanager.engine.Afda"
             android:label="@string/title_activity_afda"
             android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="org.questionairemanager.engine.ReportsActivity"
+            android:label="@string/title_activity_report" >
+        </activity>
+        <activity
+            android:name="org.questionairemanager.engine.ReportsDataActivity"
+            android:label="@string/title_activity_report_data" >
+        </activity>
+        <activity
+            android:name="org.questionairemanager.engine.BarCodeReaderActivity"
+            android:label="@string/title_activity_bar_code_reader" >
         </activity>
     </application>
 

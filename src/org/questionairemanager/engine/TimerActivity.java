@@ -205,7 +205,7 @@ public class TimerActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main_menu, menu);
+		getMenuInflater().inflate(R.menu.timer, menu);
 		return true;
 	}
 	
@@ -217,11 +217,12 @@ public class TimerActivity extends Activity {
         	Intent iIntent = new Intent(TimerActivity.this, GPSActivity.class);
     		startActivity(iIntent);
     		return true;
-         
-        case R.id.menu_timer:
-        	Intent iIntentTimer = new Intent(TimerActivity.this, TimerActivity.class);
-    		startActivity(iIntentTimer);
-    		return true;
+    		
+        case R.id.menu_barcodereader:
+        	Intent iIntentBarCode = new Intent(TimerActivity.this, BarCodeReaderActivity.class);
+        	iIntentBarCode.putExtra("IdOrigin", ""+0);
+    		startActivity(iIntentBarCode);
+    		return true;		
         
         case R.id.menu_change_subject:
         	showMsg.instantMessage("CHANGE SUBJECT", this);
@@ -234,6 +235,11 @@ public class TimerActivity extends Activity {
         case R.id.menu_logout:
         	showMsg.instantMessage("LOGOUT", this);
         	return true;
+        	
+        case R.id.menu_reports:
+        	Intent iIntentReport = new Intent(TimerActivity.this, ReportsActivity.class);
+    		startActivity(iIntentReport);
+        	return true;		
        
         default:
         	return super.onOptionsItemSelected(miItem);

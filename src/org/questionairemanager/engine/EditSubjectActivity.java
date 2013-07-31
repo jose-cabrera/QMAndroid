@@ -15,7 +15,7 @@ public class EditSubjectActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.edit_subject_layaout);
+		setContentView(R.layout.edit_subject_layout);
 		
 		
 	}
@@ -40,6 +40,12 @@ public class EditSubjectActivity extends Activity {
         	Intent iIntentTimer = new Intent(EditSubjectActivity.this, TimerActivity.class);
     		startActivity(iIntentTimer);
     		return true;
+    		
+        case R.id.menu_barcodereader:
+        	Intent iIntentBarCode = new Intent(EditSubjectActivity.this, BarCodeReaderActivity.class);
+        	iIntentBarCode.putExtra("IdOrigin", ""+0);
+    		startActivity(iIntentBarCode);
+    		return true;		
         
         case R.id.menu_change_subject:
         	showMsg.instantMessage("CHANGE SUBJECT", this);
@@ -52,6 +58,11 @@ public class EditSubjectActivity extends Activity {
         case R.id.menu_logout:
         	showMsg.instantMessage("LOGOUT", this);
         	return true;
+        	
+        case R.id.menu_reports:
+        	Intent iIntentReport = new Intent(EditSubjectActivity.this, ReportsActivity.class);
+    		startActivity(iIntentReport);
+        	return true;		
        
         default:
         	return super.onOptionsItemSelected(miItem);

@@ -19,6 +19,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -34,8 +36,10 @@ public class ScreenMaker {
      */
 		private Context ctCtx;
 		private LinearLayout lyPrincipal, lyContent;
+		TableLayout  tlDataTable;
+		TableRow trDataRow;
 		View vEmptySpace;
-		TextView tvKey, tvValue, tvQuestion, tvText, tvLatitude, tvLongitude, tvAltitude, tvBearing, tvSpeed, tvHelpText;
+		TextView tvKey, tvValue, tvQuestion, tvText, tvLatitude, tvLongitude, tvAltitude, tvBearing, tvSpeed, tvHelpText, tvCell;
 		EditText etTextInput, etNumberInput, etDateTimeInput, etDecimalNumberInput, etTimeInput, etPhoneInput, etTextArea;
 		android.widget.DatePicker etDateInput, etDTDateInput;
 		android.widget.TimePicker tpTimeInput, tpDTTimeInput;
@@ -301,89 +305,55 @@ public class ScreenMaker {
 
         public RadioGroup getRadioButtonsValue(){
             return rgRadioButtons;
-        }
-        
-        public void createGps(){//GPS Creator, will be using GPSActivity instead. More eficient 
-        	//tvLatitude, tvLongitude, tvAltitud, tvBearing, tvSpeed;
-        	tvLatitude = (TextView) new TextView(ctCtx);
-        	tvLatitude.setGravity(Gravity.RIGHT);
-        	tvLongitude = (TextView) new TextView(ctCtx);
-        	tvLongitude.setGravity(Gravity.RIGHT);
-        	tvAltitude = (TextView) new TextView(ctCtx);
-        	tvAltitude.setGravity(Gravity.RIGHT);
-        	tvBearing = (TextView) new TextView(ctCtx);
-        	tvBearing.setGravity(Gravity.RIGHT);
-        	tvSpeed = (TextView) new TextView(ctCtx);
-        	tvSpeed.setGravity(Gravity.RIGHT);
-        	        	
-        	TextView tvTagLatitude = (TextView) new TextView(ctCtx);
-        	tvTagLatitude.setText("Latitude");
-        	tvTagLatitude.setGravity(Gravity.LEFT);
-        	TextView tvTagLongitude = (TextView) new TextView(ctCtx);
-        	tvTagLongitude.setText("Longitude");
-        	tvTagLongitude.setGravity(Gravity.LEFT);
-        	TextView tvTagAltitude = (TextView) new TextView(ctCtx);
-        	tvTagAltitude.setText("Altitude");
-        	tvTagAltitude.setGravity(Gravity.LEFT);
-        	TextView tvTagBearing = (TextView) new TextView(ctCtx);
-        	tvTagBearing.setText("Bearing");
-        	tvTagBearing.setGravity(Gravity.LEFT);
-        	TextView tvTagSpeed = (TextView) new TextView(ctCtx);
-        	tvTagSpeed.setText("Speed");
-        	tvTagSpeed.setGravity(Gravity.LEFT);
-        	
-        	btnGPS = (Button) new Button(ctCtx);
-        	
-        	LinearLayout llGpsVertical = new LinearLayout(ctCtx);
-        	llGpsVertical.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-        	llGpsVertical.setOrientation(LinearLayout.VERTICAL);
-        	
-        	llGpsVertical.addView(tvLatitude);
-        	llGpsVertical.addView(tvLongitude);
-        	llGpsVertical.addView(tvAltitude);
-        	llGpsVertical.addView(tvBearing);
-        	llGpsVertical.addView(tvSpeed);
-        	llGpsVertical.addView(tvTagLatitude);
-        	llGpsVertical.addView(tvTagLongitude);
-        	llGpsVertical.addView(tvTagAltitude);
-        	llGpsVertical.addView(tvTagBearing);
-        	llGpsVertical.addView(tvTagSpeed);
-        	llGpsVertical.addView(btnGPS);
-        	
-        	lyContent.addView(llGpsVertical);                	 
-        }
-        
-        public Button getBtnGps(){
-        	return btnGPS;
-        }
-        
-        public TextView getLatitudeView(){
-        	return tvLatitude;
-        }
-        
-        public TextView getLongitudeView(){
-        	return tvLongitude;
-        }
-        
-       public TextView getAltitudeView(){
-    	   return tvAltitude;
+        }        
+        /**
+         * 
+         * @param asColumns
+         * @param asValues
+         */
+       public void DataTable(String[] asColumns, String[][] asValues){
+    	   tlDataTable = (TableLayout) new TableLayout(ctCtx);
+    	   trDataRow = (TableRow) new TableRow(ctCtx);
+    	   tvCell = (TextView) new TextView(ctCtx);
+    	   
+    	   TableRow.LayoutParams llParams = new TableRow.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+    	   llParams.setMargins(0, 0, 2, 0);
+    	   
+    	   LinearLayout llCell = (LinearLayout) new LinearLayout(ctCtx);
+    	   llCell.setBackgroundColor(Color.WHITE);
+    	   llCell.setLayoutParams(llParams);    	   
+    	   
+    	   for(int i=0; i<=asColumns.length; i++){
+    		   tvCell.setText(asColumns[i].toString());
+    		   tvCell.setPadding(0, 0, 4, 3);
+    		   llCell.addView(tvCell);
+    	   }
+    	   trDataRow.addView(llCell);
+    	   tlDataTable.addView(trDataRow);
+    	   
+    	   for(int i=0; i<=asValues.length; i++){
+    		   for(int j=0; j<=asValues[i].length; j++){
+    			   tvCell.setText(asValues[i][j]);
+    			   tvCell.setPadding(0, 0, 4, 3);
+        		   llCell.addView(tvCell);
+    		   }
+    		   trDataRow.addView(llCell);
+    		   tlDataTable.addView(trDataRow);
+    	   }    	 
+    	   lyContent.addView(tlDataTable);
+       } 
+       
+       public TableLayout getDataTable(){
+    	   return tlDataTable;
        }
        
-       public TextView getBearingView(){
-    	   return tvBearing;
-       }
-       
-       public TextView getSpeedView(){
-    	   return tvSpeed;
-       }
-
-    /**
-     * It add the ScrollView with the lyContent that has all the views on it, to the lyPrincipal, wich is returned to used on the fragment
-     * @author Jose Cabrera <email>jose.cabrera@centrikal.com</email>
-     * @return lyPrincial, it returns the layaout with the scroll view and the content layout with all the view add to it
-     */
-		public LinearLayout MakeScreen(){
+       /**
+        * It add the ScrollView with the lyContent that has all the views on it, to the lyPrincipal, wich is returned to used on the fragment
+        * @author Jose Cabrera <email>jose.cabrera@centrikal.com</email>
+        * @return lyPrincial, it returns the layaout with the scroll view and the content layout with all the view add to it
+        */
+       public LinearLayout MakeScreen(){
 			lyPrincipal.addView(lyContent);
 			return lyPrincipal;
-		}
+       }
 }

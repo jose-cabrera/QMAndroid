@@ -10,6 +10,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,12 +23,14 @@ import android.widget.Toast;
 public class GPSActivity extends Activity implements LocationListener {
 	
   ShowMessage showMsg = new ShowMessage();
-  private TextView tvLatitude, tvLongitude, tvAltitud, tvBearing, tvSpeed;
+  private TextView tvLatitude, tvLongitude, tvAltitud, tvBearing, tvSpeed, tvGPSQuestion;
+  private Button btnNext;
   private LocationManager locationManager;
   private String provider;
   MenuItem miItem;
   int iTools = 0;
   private int gps=0;
+  int IdOrigin;
 
   final int iGps_Menu_Item = Menu.FIRST;
   final int iTimer_Menu_Item = iGps_Menu_Item + 1;
@@ -41,9 +44,22 @@ public class GPSActivity extends Activity implements LocationListener {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    
     setContentView(R.layout.gps_layout);
     
+    //IF GPS Activity is called from 
+    btnNext = (Button) findViewById(R.id.btnNextGps);
+    tvGPSQuestion = (TextView) findViewById(R.id.tvGPSQuestion);
+    
+    IdOrigin = Integer.parseInt(getIntent().getExtras().getString("IdOrigin"));
+    if(IdOrigin == 1){
+    	btnNext.setVisibility(View.VISIBLE);//0 means Visible
+    	tvGPSQuestion.setText("GPS Location Question for user to save GPS Data.");
+    }
+    if(IdOrigin == 0){
+    	btnNext.setVisibility(View.INVISIBLE);//1 means Invisible
+    	tvGPSQuestion.setText("");
+    }
+           
     tvLatitude = (TextView) findViewById(R.id.tvLatitude);
     tvLongitude = (TextView) findViewById(R.id.tvLongitude);
     tvAltitud = (TextView) findViewById(R.id.tvAltitud);
@@ -98,8 +114,22 @@ public class GPSActivity extends Activity implements LocationListener {
 	 			tvAltitud.setText("Getting your Altitud");
 	 			tvBearing.setText("Getting your Bearing");
 	 			tvSpeed.setText("Getting your Speed");
+	 			if(IdOrigin == 1){
+	 				//Guardar valores en DB
+	 			}
         	}
         } );
+    
+    btnNext.setOnClickListener(new OnClickListener(){
+    	
+    	@Override
+    	public void onClick(View v){
+    		Intent iIntent = new Intent(GPSActivity.this, QuestionsActivity.class);
+    		iIntent.putExtra("IdOriginQuestion", ""+0);
+    		startActivity(iIntent);
+    	}
+    	   
+    });
     
     if(gps<2){
         try {
@@ -150,7 +180,7 @@ public class GPSActivity extends Activity implements LocationListener {
   @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main_menu, menu);
+		getMenuInflater().inflate(R.menu.gps_menu, menu);
 		return true;
 	}
 	
@@ -162,15 +192,17 @@ public class GPSActivity extends Activity implements LocationListener {
   public boolean onOptionsItemSelected(MenuItem miItem){
   	
   	switch (miItem.getItemId()) {
-      case R.id.menu_gps:
-      	Intent iIntent = new Intent(GPSActivity.this, GPSActivity.class);
-  		startActivity(iIntent);
-  		return true;
        
       case R.id.menu_timer:
       	Intent iIntentTimer = new Intent(GPSActivity.this, TimerActivity.class);
   		startActivity(iIntentTimer);
   		return true;
+  		
+      case R.id.menu_barcodereader:
+      	Intent iIntentBarCode = new Intent(GPSActivity.this, BarCodeReaderActivity.class);
+      	iIntentBarCode.putExtra("IdOrigin", ""+0);
+  		startActivity(iIntentBarCode);
+  		return true;	
       
       case R.id.menu_change_subject:
       	showMsg.instantMessage("CHANGE SUBJECT", this);
@@ -183,6 +215,11 @@ public class GPSActivity extends Activity implements LocationListener {
       case R.id.menu_logout:
       	showMsg.instantMessage("LOGOUT", this);
       	return true;
+      	
+      case R.id.menu_reports:
+      	Intent iIntentReport = new Intent(GPSActivity.this, ReportsActivity.class);
+  		startActivity(iIntentReport);
+      	return true;		
      
       default:
       	return super.onOptionsItemSelected(miItem);
@@ -285,7 +322,7 @@ public class GPSActivity extends Activity implements LocationListener {
    */
   public void turnOnGps(){
 		final Dialog dialog=new Dialog(this);
-  	dialog.setContentView(R.layout.turnongps);
+  	dialog.setContentView(R.layout.turnongps_dialog_layout);
   	dialog.setTitle("GPS");
   	dialog.setCancelable(false);
   	dialog.show();
@@ -316,7 +353,7 @@ public class GPSActivity extends Activity implements LocationListener {
    */
   public void turnoffGps(){
 		final Dialog dialog=new Dialog(this);
-  	dialog.setContentView(R.layout.turnoffgps);
+  	dialog.setContentView(R.layout.turnoffgps_dialog_layout);
   	dialog.setTitle("GPS");
   	dialog.setCancelable(false);
   	dialog.show();

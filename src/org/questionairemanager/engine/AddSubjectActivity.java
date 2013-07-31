@@ -75,6 +75,12 @@ public class AddSubjectActivity extends Activity {
         	Intent iIntentTimer = new Intent(AddSubjectActivity.this, TimerActivity.class);
     		startActivity(iIntentTimer);
     		return true;
+    		
+        case R.id.menu_barcodereader:
+        	Intent iIntentBarCode = new Intent(AddSubjectActivity.this, BarCodeReaderActivity.class);
+        	iIntentBarCode.putExtra("IdOrigin", ""+0);
+    		startActivity(iIntentBarCode);
+    		return true;		
         
         case R.id.menu_change_subject:
         	showMsg.instantMessage("CHANGE SUBJECT", this);
@@ -88,6 +94,11 @@ public class AddSubjectActivity extends Activity {
         	showMsg.instantMessage("LOGOUT", this);
         	return true;
        
+        case R.id.menu_reports:
+        	Intent iIntentReport = new Intent(AddSubjectActivity.this, ReportsActivity.class);
+    		startActivity(iIntentReport);
+        	return true;	
+        	
         default:
         	return super.onOptionsItemSelected(miItem);
          
