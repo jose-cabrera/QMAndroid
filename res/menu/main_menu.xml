@@ -12,6 +12,16 @@
                   android:title="@string/barcode_reader" />
         </menu>
         </item>
+        <item android:id="@+id/menu_languate"
+          android:title="@string/language_selector" >
+        <!-- "file" submenu -->
+        <menu>
+            <item android:id="@+id/menu_language_en"
+                  android:title="@string/english" />
+            <item android:id="@+id/menu_language_es"
+                  android:title="@string/spanish" />            
+        </menu>
+        </item>
         <item android:id="@+id/menu_reports"
           android:title="@string/reports" />
         <item android:id="@+id/menu_change_subject"
@@ -19,6 +29,5 @@
         <item android:id="@+id/menu_change_study"
           android:title="@string/change_study" />
         <item android:id="@+id/menu_logout"
-          android:title="@string/logout" />   
-               
+          android:title="@string/logout" />                  
 </menu>

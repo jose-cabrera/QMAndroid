@@ -1,8 +1,11 @@
 package org.questionairemanager.engine;
 
+import java.util.Locale;
+
 import org.questionairemanager.engine.utility.ShowMessage;
 
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,15 +14,13 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 
 public class SubjectActivity extends Activity {
 
 	ShowMessage showMsg = new ShowMessage();
-	MenuItem miItem;
-	int iTools = 0;
-
-	final int iGps_Menu_Item = Menu.FIRST;
-	final int iTimer_Menu_Item = iGps_Menu_Item + 1;
+	Locale lLanguage;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -100,11 +101,30 @@ public class SubjectActivity extends Activity {
         case R.id.menu_reports:
         	Intent iIntentReport = new Intent(SubjectActivity.this, ReportsActivity.class);
     		startActivity(iIntentReport);
-        	return true;		
+        	return true;	
+        	
+        case R.id.menu_language_en:
+           	setLocale("en");
+       		return true;
+        		
+        case R.id.menu_language_es:
+           	setLocale("es");
+       		return true;		
        
         default:
         	return super.onOptionsItemSelected(miItem);
          
         }
     }
+    
+    public void setLocale(String lang) { 
+		lLanguage = new Locale(lang); 
+		Resources res = getResources(); 
+		DisplayMetrics dm = res.getDisplayMetrics(); 
+		Configuration conf = res.getConfiguration(); 
+		conf.locale = lLanguage; 
+		res.updateConfiguration(conf, dm); 
+		Intent refresh = new Intent(this, SelectInterviewer.class); 
+		startActivity(refresh); 
+	} 
 }

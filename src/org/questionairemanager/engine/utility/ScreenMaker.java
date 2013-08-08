@@ -163,7 +163,7 @@ public class ScreenMaker {
      */
         public void DecimalNumberInput(){
             etDecimalNumberInput = new EditText(ctCtx);
-            etDecimalNumberInput.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
+            etDecimalNumberInput.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
             etDecimalNumberInput.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
             lyContent.addView(etDecimalNumberInput);
         }
@@ -311,7 +311,7 @@ public class ScreenMaker {
          * @param asColumns
          * @param asValues
          */
-       public void DataTable(String[] asColumns, String[][] asValues){
+       /*public void DataTable(String[] asColumns, String[][] asValues){
     	   tlDataTable = (TableLayout) new TableLayout(ctCtx);
     	   trDataRow = (TableRow) new TableRow(ctCtx);
     	   tvCell = (TextView) new TextView(ctCtx);
@@ -345,7 +345,7 @@ public class ScreenMaker {
        
        public TableLayout getDataTable(){
     	   return tlDataTable;
-       }
+       }*/
        
        /**
         * It add the ScrollView with the lyContent that has all the views on it, to the lyPrincipal, wich is returned to used on the fragment

@@ -1,10 +1,15 @@
 package org.questionairemanager.engine;
 
+import java.util.Locale;
+
 import org.questionairemanager.engine.utility.ShowMessage;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,11 +20,7 @@ import android.widget.EditText;
 public class AddSubjectActivity extends Activity {
 
 	ShowMessage showMsg = new ShowMessage();
-	MenuItem miItem;
-	int iTools = 0;
-
-	final int iGps_Menu_Item = Menu.FIRST;
-	final int iTimer_Menu_Item = iGps_Menu_Item + 1;
+	Locale lLanguage;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +33,9 @@ public class AddSubjectActivity extends Activity {
 	        	
 	        	@Override 
 	        	public void onClick(View v){    
-	        		if(etSaSubjectId.getText().toString() != null || etSaSubjectId.getText().toString() != ""){
-	        			Intent iIntent = new Intent(AddSubjectActivity.this, QuestionsActivity.class);
-	        			iIntent.putExtra("SubjectId", etSaSubjectId.getText().toString());
-	        			startActivity(iIntent);
-	        		}
-	        		else{
-	        			showMsg.instantMessage("Please add a SASubjectId to continue.", AddSubjectActivity.this);
-	        		}
-	        			
+        			Intent iIntent = new Intent(AddSubjectActivity.this, QuestionsActivity.class);
+        			iIntent.putExtra("SubjectId", etSaSubjectId.getText().toString());
+        			startActivity(iIntent);	
 	        	}
 	        } );
 		
@@ -99,9 +94,28 @@ public class AddSubjectActivity extends Activity {
     		startActivity(iIntentReport);
         	return true;	
         	
+        case R.id.menu_language_en:
+           	setLocale("en");
+       		return true;
+        		
+        case R.id.menu_language_es:
+           	setLocale("es");
+       		return true;		
+        	
         default:
         	return super.onOptionsItemSelected(miItem);
          
         }
     }
+    
+    public void setLocale(String lang) { 
+		lLanguage = new Locale(lang); 
+		Resources res = getResources(); 
+		DisplayMetrics dm = res.getDisplayMetrics(); 
+		Configuration conf = res.getConfiguration(); 
+		conf.locale = lLanguage; 
+		res.updateConfiguration(conf, dm); 
+		Intent refresh = new Intent(this, AddSubjectActivity.class); 
+		startActivity(refresh); 
+	} 
 }

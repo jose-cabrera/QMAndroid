@@ -2,12 +2,17 @@ package org.questionairemanager.engine;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import org.questionairemanager.engine.utility.ShowMessage;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,19 +22,14 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class SelectInterviewer extends Activity {
 
 	ShowMessage showMsg = new ShowMessage();
 	Spinner sCode;
 	TextView tvStudyNameLong;
 	TextView tvStudyNameShort;
-	Button btnLogIn;
-	Button btnExit;
-	MenuItem miItem;
-	int iTools = 0;
-
-	final int iGps_Menu_Item = Menu.FIRST;
-	final int iTimer_Menu_Item = iGps_Menu_Item + 1;
+	Locale lLanguage;
+	Button btnNext, btnBack;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,22 +42,22 @@ public class MainActivity extends Activity {
         tvStudyNameShort.setText("(NS)");
         addItemsOnSpinner2();
         
-        btnLogIn = (Button) findViewById(R.id.btnLogIn);
-        btnLogIn.setOnClickListener(new OnClickListener(){
+        btnNext = (Button) findViewById(R.id.btnNext);
+        btnNext.setOnClickListener(new OnClickListener(){
         	
         	@Override 
         	public void onClick(View v){
-        		Intent iIntent = new Intent(MainActivity.this, SubjectActivity.class);
+        		Intent iIntent = new Intent(SelectInterviewer.this, SubjectActivity.class);
         		startActivity(iIntent);
         	}
         } );
         
-        btnExit = (Button) findViewById(R.id.btnExit);
-        btnExit.setOnClickListener(new OnClickListener(){
+        btnBack = (Button) findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new OnClickListener(){
         	
         	@Override 
         	public void onClick(View v){
-        		MainActivity.super.onBackPressed();
+        		SelectInterviewer.super.onBackPressed();
         	}
         } );
         
@@ -76,22 +76,22 @@ public class MainActivity extends Activity {
     	
     	switch (miItem.getItemId()) {
         case R.id.menu_gps:
-        	Intent iIntent = new Intent(MainActivity.this, GPSActivity.class);
+        	Intent iIntent = new Intent(SelectInterviewer.this, GPSActivity.class);
         	iIntent.putExtra("IdOrigin", ""+0);
     		startActivity(iIntent);
     		return true;
          
         case R.id.menu_timer:
-        	Intent iIntentTimer = new Intent(MainActivity.this, TimerActivity.class);
+        	Intent iIntentTimer = new Intent(SelectInterviewer.this, TimerActivity.class);
     		startActivity(iIntentTimer);
     		return true;
     		
         case R.id.menu_barcodereader:
-        	Intent iIntentBarCode = new Intent(MainActivity.this, BarCodeReaderActivity.class);
+        	Intent iIntentBarCode = new Intent(SelectInterviewer.this, BarCodeReaderActivity.class);
         	iIntentBarCode.putExtra("IdOrigin", ""+0);
     		startActivity(iIntentBarCode);
     		return true;	
-        
+    		             
         case R.id.menu_change_subject:
         	showMsg.instantMessage("CHANGE SUBJECT", this);
         	return true;
@@ -105,9 +105,17 @@ public class MainActivity extends Activity {
         	return true;
         	
         case R.id.menu_reports:
-        	Intent iIntentReport = new Intent(MainActivity.this, ReportsActivity.class);
+        	Intent iIntentReport = new Intent(SelectInterviewer.this, ReportsActivity.class);
     		startActivity(iIntentReport);
         	return true;
+        	
+        case R.id.menu_language_en:
+           	setLocale("en");
+       		return true;
+        		
+        case R.id.menu_language_es:
+           	setLocale("es");
+       		return true;		
        
         default:
         	return super.onOptionsItemSelected(miItem);
@@ -128,4 +136,15 @@ public class MainActivity extends Activity {
     	sCode.setAdapter(dataAdapter);
       }
     
+    public void setLocale(String lang) { 
+		lLanguage = new Locale(lang); 
+		Resources res = getResources(); 
+		DisplayMetrics dm = res.getDisplayMetrics(); 
+		Configuration conf = res.getConfiguration(); 
+		conf.locale = lLanguage; 
+		res.updateConfiguration(conf, dm); 
+		Intent refresh = new Intent(this, SelectInterviewer.class); 
+		startActivity(refresh); 
+	} 
+      
 }

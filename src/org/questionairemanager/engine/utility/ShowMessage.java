@@ -11,4 +11,11 @@ public class ShowMessage {
 	                msg.getYOffset() / 2);
 	        msg.show();
 	    }
+	   
+	   public void longInstantMessage(final String message, final Context ctx) {
+	        Toast msg = Toast.makeText(ctx, message, Toast.LENGTH_LONG);
+	        msg.setGravity(Gravity.CENTER, msg.getXOffset() / 2,
+	                msg.getYOffset() / 2);
+	        msg.show();
+	    }
 }

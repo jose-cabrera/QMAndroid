@@ -151,9 +151,9 @@ public class QuestionsActivity extends Activity {
 	        		case 6://NumberInput
 	        			llQuestion.removeAllViewsInLayout();
 	        			smScreen.CleanScreen();
-	            		smScreen.Text("Question number 5 NumberInput");
+	            		smScreen.Text("Question number 5 Decimal");
 	            		smScreen.EmptySapce(20);
-	            		smScreen.NumberInput();
+	            		smScreen.DecimalNumberInput();
 	            		etNumberInputValue = (EditText) smScreen.getNumberInputValue();
 	            		imm.hideSoftInputFromWindow(etNumberInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 	            		llQuestion.addView(smScreen.MakeScreen());
@@ -268,11 +268,11 @@ public class QuestionsActivity extends Activity {
 	        		case 4://NumberInput
 	        			llQuestion.removeAllViewsInLayout();
 	        			smScreen.CleanScreen();
-		        		smScreen.Text("Question number 5 NumberInput");
+		        		smScreen.Text("Question number 5 DecimalNumberInput");
 		        		smScreen.EmptySapce(20);
-		        		smScreen.NumberInput();
+		        		smScreen.DecimalNumberInput();
 		        		etNumberInputValue = (EditText) smScreen.getNumberInputValue();
-		        		imm.hideSoftInputFromWindow(etNumberInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+		        		//imm.hideSoftInputFromWindow(etNumberInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 		        		llQuestion.addView(smScreen.MakeScreen());
 	        			contador++;
 	        			break;
@@ -573,9 +573,9 @@ public class QuestionsActivity extends Activity {
     		case 6://NumberInput
     			llQuestion.removeAllViewsInLayout();
     			smScreen.CleanScreen();
-        		smScreen.Text("Question number 5 NumberInput");
+        		smScreen.Text("Question number 5 DecimalNumberInput");
         		smScreen.EmptySapce(20);
-        		smScreen.NumberInput();
+        		smScreen.DecimalNumberInput();
         		etNumberInputValue = (EditText) smScreen.getNumberInputValue();
         		imm.hideSoftInputFromWindow(etNumberInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         		llQuestion.addView(smScreen.MakeScreen());

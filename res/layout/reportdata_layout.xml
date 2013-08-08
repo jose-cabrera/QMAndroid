@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_gravity="center"
@@ -43,6 +43,13 @@
 
             </LinearLayout>
 
+            <TableLayout
+                android:id="@+id/tlDataTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+            </TableLayout>
+
             <ScrollView
                 android:id="@+id/svQuestionScroll"
                 android:layout_width="match_parent"
@@ -79,4 +86,4 @@
 
         </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

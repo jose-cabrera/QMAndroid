@@ -103,21 +103,22 @@
                     android:layout_height="wrap_content">
 
                 <Button
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
-                        android:text="@string/exitbutton"
-                        android:id="@+id/btnExit"
-                        android:layout_gravity="right"
-                        android:textSize="15sp"/>
+                    android:id="@+id/btnBack"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:text="@string/backbutton"
+                    android:textSize="15sp" />
 
                 <Button
-                        android:layout_width="80dp"
-                        android:layout_height="40dp"
-                        android:text="@string/login"
-                        android:id="@+id/btnLogIn"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
-                        android:textSize="15sp"/>
+                    android:id="@+id/btnNext"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/nextbutton"
+                    android:textSize="15sp" />
+
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>

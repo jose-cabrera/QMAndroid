@@ -20,4 +20,8 @@ public class LoadingDialog {
 	public void showSpinnerLoading(){	
 		pgProgressDialog.show();		
 	}
+	
+	public void stopSpinnerLoading(){
+		pgProgressDialog.cancel();
+	}
 }
