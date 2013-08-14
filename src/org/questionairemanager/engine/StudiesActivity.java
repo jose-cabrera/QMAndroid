@@ -111,7 +111,10 @@ public class StudiesActivity extends Activity {
 	         
 	        }
 	    }
-	    
+	    /**
+		 * Changes the language Resource files
+		 * @param lang, String, the language you want to select
+		 */
 	    public void setLocale(String lang) { 
 			lLanguage = new Locale(lang); 
 			Resources res = getResources(); 

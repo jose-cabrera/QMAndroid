@@ -135,7 +135,10 @@ public class SelectInterviewer extends Activity {
     	dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     	sCode.setAdapter(dataAdapter);
       }
-    
+    /**
+	 * Changes the language Resource files
+	 * @param lang, String, the language you want to select
+	 */
     public void setLocale(String lang) { 
 		lLanguage = new Locale(lang); 
 		Resources res = getResources(); 

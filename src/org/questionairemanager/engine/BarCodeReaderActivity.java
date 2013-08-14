@@ -1,15 +1,20 @@
 package org.questionairemanager.engine;
 
+import java.util.Locale;
+
 import org.questionairemanager.engine.utility.ShowMessage;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -130,4 +135,19 @@ public class BarCodeReaderActivity extends Activity implements OnClickListener{
 		    showMsg.instantMessage( "No scan data received!", this);
 		}
 	}
+	
+	/**
+	 * Changes the language Resource files
+	 * @param lang, String, the language you want to select
+	 */
+	public void setLocale(String lang) { 
+		Locale lLanguage = new Locale(lang); 
+		Resources res = getResources(); 
+		DisplayMetrics dm = res.getDisplayMetrics(); 
+		Configuration conf = res.getConfiguration(); 
+		conf.locale = lLanguage; 
+		res.updateConfiguration(conf, dm); 
+		Intent refresh = new Intent(this, WelcomeActivity.class); 
+		startActivity(refresh); 
+	} 
 }

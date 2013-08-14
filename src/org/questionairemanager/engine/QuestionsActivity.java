@@ -1,5 +1,6 @@
 package org.questionairemanager.engine;
 
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -8,6 +9,7 @@ import org.questionairemanager.engine.utility.ScreenMaker;
 import org.questionairemanager.engine.utility.ShowMessage;
 
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +24,8 @@ import android.widget.TextView;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 
 public class QuestionsActivity extends Activity {
 
@@ -683,4 +687,19 @@ public class QuestionsActivity extends Activity {
          
         }
     }
+    
+    /**
+	 * Changes the language Resource files
+	 * @param lang, String, the language you want to select
+	 */
+	public void setLocale(String lang) { 
+		Locale lLanguage = new Locale(lang); 
+		Resources res = getResources(); 
+		DisplayMetrics dm = res.getDisplayMetrics(); 
+		Configuration conf = res.getConfiguration(); 
+		conf.locale = lLanguage; 
+		res.updateConfiguration(conf, dm); 
+		Intent refresh = new Intent(this, WelcomeActivity.class); 
+		startActivity(refresh); 
+	} 
 }

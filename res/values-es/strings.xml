@@ -70,4 +70,7 @@
     <string name="select_the_studie_to_work_with">Seleccione el estudio para trabajar</string>
     <string name="studie_">Estudio: </string>
     <string name="tap_the_screen_to_begin_qm">Presione la pantalla para iniciar QM</string>
+    <string name="time">Tiempo:</string>
+    <string name="nmea">NMEA:</string>
+    <string name="satellite">Satelite:</string>
 </resources>

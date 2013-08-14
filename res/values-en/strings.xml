@@ -75,5 +75,8 @@
     <string name="select_the_studie_to_work_with">Select the studie to work with</string>
     <string name="studie_">"Studie: "</string>
     <string name="tap_the_screen_to_begin_qm">Tap the Screen to Begin QM</string>
+    <string name="time">Time:</string>
+    <string name="nmea">NMEA:</string>
+    <string name="satellite">Satellite:</string>
 
 </resources>
