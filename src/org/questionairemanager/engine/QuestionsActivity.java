@@ -113,7 +113,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 	            		smScreen.Text("Question number 0. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
 	            		smScreen.EmptySapce(20);
-	            		smScreen.RadioButtons(alValues);	
+	            		//smScreen.RadioButtons(alValues);	
 	            		llQuestion.addView(smScreen.MakeScreen());
 	            		contador--;
 	        			break;
@@ -123,7 +123,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 	            		smScreen.Text("Question number 1. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
 	            		smScreen.EmptySapce(20);
-	            		smScreen.CheckBox(alValues);
+	            		//smScreen.CheckBox(alValues);
 	            		llQuestion.addView(smScreen.MakeScreen());
 	            		contador--;
 	        			break;
@@ -228,7 +228,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 		        		smScreen.Text("Question number 0. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
 		        		smScreen.EmptySapce(20);
-		        		smScreen.RadioButtons(alValues);	
+		        		//smScreen.RadioButtons(alValues);	
 		        		 llQuestion.addView(smScreen.MakeScreen());		    
 		        		contador++;
 	        			break;
@@ -238,7 +238,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 		        		smScreen.Text("Question number 1. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
 		        		smScreen.EmptySapce(20);
-		        		smScreen.CheckBox(alValues);
+		        		//smScreen.CheckBox(alValues);
 		        		 llQuestion.addView(smScreen.MakeScreen());
 
 		        		contador++;
@@ -353,18 +353,7 @@ public class QuestionsActivity extends Activity {
 	    llQuestion.addView(smScreen.MakeScreen());
 	         
 	}
-	
-	public void hideKeybord(){
-		etTextAreaValue = (EditText) smScreen.getTextAreaValue();
-		imm.hideSoftInputFromWindow(etTextAreaValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-		etTextInputValue = (EditText) smScreen.getTextInputValue();
-		imm.hideSoftInputFromWindow(etTextInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-		etNumberInputValue = (EditText) smScreen.getNumberInputValue();
-		imm.hideSoftInputFromWindow(etNumberInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-		etPhoneInputValue = (EditText) smScreen.getPhoneInputValue();
-		imm.hideSoftInputFromWindow(etPhoneInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-	}
-	
+		
 	public void paintScreenTemplates(int iIdTemplate, String sPregunta){
 		LinearLayout llQuestion = (LinearLayout) findViewById(R.id.llQuestionsLayout);
 		String sPreguntaWithVariableValue = getVariableValue(sPregunta);
@@ -375,7 +364,6 @@ public class QuestionsActivity extends Activity {
 				smScreen.CleanScreen();
 				smScreen.Text(sPreguntaWithVariableValue);
 				smScreen.EmptySapce(20);
-				hideKeybord();
 				llQuestion.addView(smScreen.MakeScreen());
 				break;
 			
@@ -385,7 +373,6 @@ public class QuestionsActivity extends Activity {
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
         		smScreen.TextArea();
-        		hideKeybord();
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -395,7 +382,6 @@ public class QuestionsActivity extends Activity {
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
         		smScreen.DatePicker();
-        		hideKeybord();
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -414,7 +400,6 @@ public class QuestionsActivity extends Activity {
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
         		smScreen.DateTimePicker();
-        		hideKeybord();
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -424,7 +409,6 @@ public class QuestionsActivity extends Activity {
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
         		smScreen.TextInput();
-        		hideKeybord();
         		llQuestion.addView(smScreen.MakeScreen());		     
 				break; 
 				
@@ -434,7 +418,6 @@ public class QuestionsActivity extends Activity {
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
         		smScreen.NumberInput();
-        		hideKeybord();
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -444,7 +427,6 @@ public class QuestionsActivity extends Activity {
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
         		smScreen.PhoneInput();
-        		hideKeybord();
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -465,8 +447,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
-        		smScreen.RadioButtons(saRespuestas);	
-        		hideKeybord();
+        		//smScreen.RadioButtons(saRespuestas);	
         		 llQuestion.addView(smScreen.MakeScreen());		   
 				break;
 				
@@ -475,8 +456,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
-        		smScreen.CheckBox(saRespuestas);
-        		hideKeybord();
+        		//smScreen.CheckBox(saRespuestas);        	
         		 llQuestion.addView(smScreen.MakeScreen());
 				break;
 		
@@ -535,7 +515,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text("Question number 0. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
         		smScreen.EmptySapce(20);
-        		smScreen.RadioButtons(alValues);	
+        		//smScreen.RadioButtons(alValues);	
         		llQuestion.addView(smScreen.MakeScreen());
         		contador--;
     			break;
@@ -545,7 +525,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text("Question number 1. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
         		smScreen.EmptySapce(20);
-        		smScreen.CheckBox(alValues);
+        		//smScreen.CheckBox(alValues);
         		llQuestion.addView(smScreen.MakeScreen());
         		contador--;
     			break;

@@ -17,7 +17,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -25,6 +24,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.questionnairemanager.engine.core.Node;
 
 public class ScreenMaker {
     /**
@@ -120,7 +121,7 @@ public class ScreenMaker {
 			 lyContent.addView(etTextInput);
 		}
 		
-		public TextView getTextInputValue(){
+		public EditText getTextInputValue(){
 			return etTextInput;
 		}
 		
@@ -138,7 +139,7 @@ public class ScreenMaker {
 			 lyContent.addView(etTextArea);
 		}
 		
-		public TextView getTextAreaValue(){
+		public EditText getTextAreaValue(){
 			return etTextArea;
 		}	
 
@@ -153,7 +154,7 @@ public class ScreenMaker {
 			lyContent.addView(etNumberInput);
 		}
 		
-		public TextView getNumberInputValue(){
+		public EditText getNumberInputValue(){
 			return etNumberInput;
 		}
 
@@ -168,7 +169,7 @@ public class ScreenMaker {
             lyContent.addView(etDecimalNumberInput);
         }
         
-        public TextView getDecimalNumberInputValue(){
+        public EditText getDecimalNumberInputValue(){
 			return etDecimalNumberInput;
 		}
 
@@ -219,8 +220,8 @@ public class ScreenMaker {
             lyContent.addView(tpTimeInput);
         }
         
-        public TextView getTimeInputValue(){
-			return etTimeInput;
+        public android.widget.TimePicker getTimeInputValue(){
+			return tpTimeInput;
 		}
 
     /**
@@ -234,7 +235,7 @@ public class ScreenMaker {
             lyContent.addView(etPhoneInput);
         }
         
-        public TextView getPhoneInputValue(){
+        public EditText getPhoneInputValue(){
 			return etPhoneInput;
 		}
 
@@ -243,14 +244,13 @@ public class ScreenMaker {
      * @author Jose Cabrera <email>jose.cabrera@centrikal.com</email>
      * @param iNumber int, Get the number of item you want to add to the list
      * @param alAnswers (String)ArrayList, gets the values of the items you want on the list
-     * @id the Ids from the ComboBox items are registered with the 0000 plus the index where its located 0000+i
      */
-		public void ComboBox(String[] alAnswers) {
-			int iLength = alAnswers.length;
+		public void ComboBox(ArrayList<String> legalValues) {
+			int iLength = legalValues.size();
             spComboBox = new Spinner(ctCtx);
             List<String> lList = new ArrayList<String>();
             for(int i=0; i<iLength; i++){
-                lList.add((String) alAnswers[i]);
+                //lList.add((String) alNode.get(i));
             }
             ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(ctCtx, android.R.layout.simple_spinner_item, lList);
             spComboBox.setAdapter(dataAdapter);
@@ -268,12 +268,12 @@ public class ScreenMaker {
      * @param alValues (String)ArrayList, the values of the checkboxes
      * @id the Ids from the Checkbox are registered with the 0001 plus the index where its located 0001+i
      */
-		public void CheckBox(String[] alValues){
-			int iLength = alValues.length;
+		public void CheckBox(ArrayList<String> legalValues){
+			int iLength = legalValues.size();
 			for(int i=0; i<iLength; i++){
                 cbCheckBoxs = new CheckBox(ctCtx);
                 cbCheckBoxs.setId(0001+i);
-                cbCheckBoxs.setText((String) alValues[i]);
+                //cbCheckBoxs.setText((String) alNode.get(i).getElementMainText());
                 cbCheckBoxs.setTextSize(20);
                 lyContent.addView(cbCheckBoxs);
             }
@@ -290,62 +290,21 @@ public class ScreenMaker {
      * @param alValues (String)ArrayList, values of the radio buttons
      * @id the Ids from the RadioButtons are registered with the 0010 plus the index where its located 0010+i
      */
-		public void RadioButtons(String[] alValues){
-            rgRadioButtons = new RadioGroup(ctCtx);
-            int iLength = alValues.length;
-            for(int i=0; i<iLength; i++){
-                RadioButton rbButton = new RadioButton(ctCtx);
-                rbButton.setId(0010+i);
-                rbButton.setText((String) alValues[i]);
+		public void RadioButtons(ArrayList<String> legalValues){
+            rgRadioButtons = new RadioGroup(ctCtx);           
+            int iLength = legalValues.size();
+			for(int i=0; i<iLength; i++){
+                RadioButton rbButton = new RadioButton(ctCtx);                
+                //rbButton.setText((String) alNode.get(i).getElementMainText());
                 rbButton.setTextSize(20);
-                rgRadioButtons.addView(rbButton);
-            }
+                rgRadioButtons.addView(rbButton); 
+			}    
             lyContent.addView(rgRadioButtons);
 		}
 
         public RadioGroup getRadioButtonsValue(){
             return rgRadioButtons;
-        }        
-        /**
-         * 
-         * @param asColumns
-         * @param asValues
-         */
-       /*public void DataTable(String[] asColumns, String[][] asValues){
-    	   tlDataTable = (TableLayout) new TableLayout(ctCtx);
-    	   trDataRow = (TableRow) new TableRow(ctCtx);
-    	   tvCell = (TextView) new TextView(ctCtx);
-    	   
-    	   TableRow.LayoutParams llParams = new TableRow.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-    	   llParams.setMargins(0, 0, 2, 0);
-    	   
-    	   LinearLayout llCell = (LinearLayout) new LinearLayout(ctCtx);
-    	   llCell.setBackgroundColor(Color.WHITE);
-    	   llCell.setLayoutParams(llParams);    	   
-    	   
-    	   for(int i=0; i<=asColumns.length; i++){
-    		   tvCell.setText(asColumns[i].toString());
-    		   tvCell.setPadding(0, 0, 4, 3);
-    		   llCell.addView(tvCell);
-    	   }
-    	   trDataRow.addView(llCell);
-    	   tlDataTable.addView(trDataRow);
-    	   
-    	   for(int i=0; i<=asValues.length; i++){
-    		   for(int j=0; j<=asValues[i].length; j++){
-    			   tvCell.setText(asValues[i][j]);
-    			   tvCell.setPadding(0, 0, 4, 3);
-        		   llCell.addView(tvCell);
-    		   }
-    		   trDataRow.addView(llCell);
-    		   tlDataTable.addView(trDataRow);
-    	   }    	 
-    	   lyContent.addView(tlDataTable);
-       } 
-       
-       public TableLayout getDataTable(){
-    	   return tlDataTable;
-       }*/
+        }             
        
        /**
         * It add the ScrollView with the lyContent that has all the views on it, to the lyPrincipal, wich is returned to used on the fragment

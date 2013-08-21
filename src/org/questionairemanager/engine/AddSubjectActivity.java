@@ -28,7 +28,7 @@ public class AddSubjectActivity extends Activity {
 		setContentView(R.layout.add_subject_layout);
 		
 		final EditText etSaSubjectId = (EditText) findViewById(R.id.etSaSubjectId);
-		Button btnNext = (Button) findViewById(R.id.btnNextasa);
+		/*Button btnsNext = (Button) findViewById(R.id.btnNextasa);
 		btnNext.setOnClickListener(new OnClickListener(){
 	        	
 	        	@Override 
@@ -37,16 +37,16 @@ public class AddSubjectActivity extends Activity {
         			iIntent.putExtra("SubjectId", etSaSubjectId.getText().toString());
         			startActivity(iIntent);	
 	        	}
-	        } );
+	        } );*/
 		
-		Button btnBack = (Button) findViewById(R.id.btnBackasa);
+		/*Button btnBack = (Button) findViewById(R.id.btnBackasa);
 	    btnBack.setOnClickListener(new OnClickListener(){
 	        	
 	        	@Override 
 	        	public void onClick(View v){
 	        		AddSubjectActivity.super.onBackPressed();
 	        	}
-	        } );
+	        } );*/
 	  
 	}
 	

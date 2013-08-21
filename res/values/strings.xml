@@ -80,5 +80,6 @@
     <string name="satellite">Satellites:</string>
     <string name="accuracy_">Accuracy:</string>
     <string name="satelites_">Satellites:</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>

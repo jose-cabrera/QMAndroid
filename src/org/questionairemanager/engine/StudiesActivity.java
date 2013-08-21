@@ -56,7 +56,9 @@ public class StudiesActivity extends Activity {
 		
 	 public void addItemsOnSpinner() {    	 
 	    	sStudie = (Spinner) findViewById(R.id.sStudie);
+	    		    		    	
 	    	List<String> list = new ArrayList<String>();
+	    		    		    	
 	    	list.add("Study one");
 	    	list.add("Study two");
 	    	list.add("Study three");

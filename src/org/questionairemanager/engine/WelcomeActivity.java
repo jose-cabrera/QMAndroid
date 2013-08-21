@@ -61,10 +61,8 @@ public class WelcomeActivity extends Activity {
 			    	 showMsg.longInstantMessage(msg, WelcomeActivity.this);
 		    	 }		    	 
 		     }
-		};	  
-		
-		cdtTimer2.start();
-		
+		}.start();	  
+						
 		rlLayout.setOnClickListener(new OnClickListener(){
 
 			@Override

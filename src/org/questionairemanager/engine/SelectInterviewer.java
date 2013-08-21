@@ -34,7 +34,7 @@ public class SelectInterviewer extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        super.setContentView(R.layout.main_layout);
+        super.setContentView(R.layout.interviewer_layout);
         
         tvStudyNameLong = (TextView) findViewById(R.id.tvStudyNameLong);
         tvStudyNameLong.setText("New Study");
