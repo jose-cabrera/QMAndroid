@@ -30,7 +30,8 @@
             android:name="org.questionairemanager.engine.SubjectActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|locale"
             android:label="@string/title_activity_subject"
-            android:windowSoftInputMode="stateHidden" >
+            android:windowSoftInputMode="stateHidden" 
+            >
         </activity>
         <activity
             android:name="org.questionairemanager.engine.AddSubjectActivity"
@@ -105,11 +106,6 @@
         <activity
             android:name="org.questionairemanager.engine.WelcomeActivity"
             android:label="@string/title_activity_main" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

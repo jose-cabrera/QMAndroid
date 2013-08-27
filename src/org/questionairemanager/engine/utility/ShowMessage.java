@@ -6,6 +6,8 @@ import android.widget.Toast;
 
 public class ShowMessage {
 	   
+		Toast tNonInstant;
+	
 	   /**
 	    * Shows a Toast for short time 	
 	    * @param message, String, The message that will be display
@@ -29,4 +31,14 @@ public class ShowMessage {
 	                msg.getYOffset() / 2);
 	        msg.show();
 	    }
+	   
+	   public void Message(final String message, final Context ctx){
+		    tNonInstant = Toast.makeText(ctx, message, Toast.LENGTH_LONG);
+		    tNonInstant.setGravity(Gravity.CENTER, tNonInstant.getXOffset() / 2,
+		    		tNonInstant.getYOffset() / 2);
+	   }
+	   
+	   public void ShowNonInstanMessage(){
+		   tNonInstant.show();
+	   }
 }

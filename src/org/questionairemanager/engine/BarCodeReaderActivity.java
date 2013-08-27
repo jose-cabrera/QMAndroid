@@ -38,14 +38,11 @@ public class BarCodeReaderActivity extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.bar_code_reader_layout);
 		
-		btnScan = (Button) findViewById(R.id.btnScan);
-		btnScan.setOnClickListener(this);
+		
 		tvFormat = (TextView) findViewById(R.id.tvScan_format);
 		tvContent = (TextView) findViewById(R.id.tvScan_content);
-		tvQuestionBarCodeReader = (TextView) findViewById(R.id.tvQuestionBarCodeReader);
-		btnNext = (Button) findViewById(R.id.btnNext);
 		
-		 IdOrigin = Integer.parseInt(getIntent().getExtras().getString("IdOrigin"));
+		 IdOrigin = getIntent().getExtras().getInt("IdOrigin");
 		    if(IdOrigin == 1){
 		    	btnNext.setVisibility(View.VISIBLE);
 		    	tvQuestionBarCodeReader.setText("Please tap scan to begin BarCode Reader");
@@ -116,10 +113,10 @@ public class BarCodeReaderActivity extends Activity implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		if(v.getId()==R.id.btnScan){
-			IntentIntegrator scanIntegrator = new IntentIntegrator(this);
-			scanIntegrator.initiateScan();
-		}
+//		if(v.getId()==R.id.btnScan){
+//			IntentIntegrator scanIntegrator = new IntentIntegrator(this);
+//			scanIntegrator.initiateScan();
+//		}
 	}
 	
 	public void onActivityResult(int requestCode, int resultCode, Intent intent) {

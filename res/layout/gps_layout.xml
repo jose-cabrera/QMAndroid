@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="left"
-                    android:text="-"
+                    android:text=""
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -45,21 +45,6 @@
                     android:layout_gravity="center"
                     android:gravity="right"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/tvGPSQuestion"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="23sp" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -78,7 +63,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:gravity="center"
-                        android:text="laitude"
+                        android:text="@string/laitude"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textSize="15sp" />
 
@@ -91,7 +76,6 @@
                         android:layout_marginLeft="15dp"
                         android:text="@string/latitude_"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
-
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -105,7 +89,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:gravity="center"
-                        android:text="longitude"
+                        android:text="@string/longitude"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textSize="15sp" />
 
@@ -118,7 +102,6 @@
                         android:layout_marginLeft="15dp"
                         android:text="@string/longitude_"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
-
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -142,10 +125,9 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:gravity="center"
-                        android:text="altitud"
+                        android:text="@string/altitud"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textSize="15sp" />
-
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -159,7 +141,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:gravity="center"
-                        android:text="speed"
+                        android:text="@string/speed"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textSize="15sp" />
 
@@ -172,9 +154,8 @@
                         android:layout_marginLeft="15dp"
                         android:text="@string/speed_"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
-
                 </RelativeLayout>
-                
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp" >
@@ -186,7 +167,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:gravity="center"
-                        android:text="time"
+                        android:text="@string/timemin"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textSize="15sp" />
 
@@ -199,7 +180,6 @@
                         android:layout_marginLeft="15dp"
                         android:text="@string/time"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
-
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -214,7 +194,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:gravity="center"
-                        android:text="bearing"
+                        android:text="@string/bearing"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textSize="15sp" />
 
@@ -229,7 +209,7 @@
                         android:text="@string/bearing_"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
                 </RelativeLayout>
-                
+
                 <RelativeLayout
                     android:id="@+id/rlAccuracy"
                     android:layout_width="match_parent"
@@ -242,12 +222,12 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:gravity="center"
-                        android:text="accuracy"
+                        android:text="@string/accuracy"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textSize="15sp" />
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/textView44"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_alignBaseline="@+id/tvAccuracy"
@@ -263,44 +243,18 @@
                     android:layout_height="60dp" >
 
                     <TextView
-                        android:id="@+id/tvSatellite"
-                        android:layout_width="200dp"
-                        android:layout_height="fill_parent"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:gravity="center"
-                        android:text="satellite"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="15dp"
-                        android:text="@string/satellite"
-                        android:textAppearance="?android:attr/textAppearanceLarge" />
-                </RelativeLayout>
-                
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp" >
-
-                    <TextView
                         android:id="@+id/tvNMEAString"
                         android:layout_width="200dp"
                         android:layout_height="fill_parent"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:gravity="center"
-                        android:text="nmea"
+                        android:text="@string/nmea"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textSize="15sp" />
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/textView52"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
@@ -308,7 +262,6 @@
                         android:layout_marginLeft="15dp"
                         android:text="@string/nmea"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
-
                 </RelativeLayout>
 
                 <Button
@@ -317,9 +270,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
                     android:text="@string/get_position" />
+            </LinearLayout>
 
-</LinearLayout>
-		  <RelativeLayout
+            <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" >
 
@@ -330,19 +283,8 @@
                     android:layout_gravity="right"
                     android:text="@string/backbutton"
                     android:textSize="15sp" />
-
-                <Button
-                    android:id="@+id/btnNextGps"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:text="@string/nextbutton"
-                    android:textSize="15sp" />
-
             </RelativeLayout>
         </LinearLayout>
-
     </ScrollView>
 
 </LinearLayout>

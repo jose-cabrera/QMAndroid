@@ -133,7 +133,6 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 	            		smScreen.Text("Question number 3 DatePicker. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
 	            		smScreen.EmptySapce(20);
-	            		smScreen.DatePicker();
 	            		etPhoneInputValue = (EditText) smScreen.getPhoneInputValue();
 	            		imm.hideSoftInputFromWindow(etPhoneInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 	            		llQuestion.addView(smScreen.MakeScreen());
@@ -145,7 +144,6 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 	            		smScreen.Text("Question number 4 PhoneInput");
 	            		smScreen.EmptySapce(20);
-	            		smScreen.PhoneInput();
 	            		etPhoneInputValue = (EditText) smScreen.getPhoneInputValue();
 	            		imm.hideSoftInputFromWindow(etPhoneInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 	            		llQuestion.addView(smScreen.MakeScreen());
@@ -157,7 +155,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 	            		smScreen.Text("Question number 5 Decimal");
 	            		smScreen.EmptySapce(20);
-	            		smScreen.DecimalNumberInput();
+//	            		smScreen.DecimalNumberInput();
 	            		etNumberInputValue = (EditText) smScreen.getNumberInputValue();
 	            		imm.hideSoftInputFromWindow(etNumberInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 	            		llQuestion.addView(smScreen.MakeScreen());
@@ -169,7 +167,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 	            		smScreen.Text("Question number 6 TextInput");
 	            		smScreen.EmptySapce(20);
-	            		smScreen.TextInput();
+//	            		smScreen.TextInput();
 	            		etTextInputValue = (EditText) smScreen.getTextInputValue();
 	            		imm.hideSoftInputFromWindow(etTextInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 	            		llQuestion.addView(smScreen.MakeScreen());
@@ -181,7 +179,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 	            		smScreen.Text("Question number 7 Time");
 	            		smScreen.EmptySapce(20);
-	            		smScreen.TimePicker();
+//	            		smScreen.TimePicker();
 	            		llQuestion.addView(smScreen.MakeScreen());
 	        			contador--;
 	        			break;	
@@ -191,7 +189,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 	            		smScreen.Text("Question number 8 DateTime");
 	            		smScreen.EmptySapce(20);
-	            		smScreen.DateTimePicker();
+//	            		smScreen.DateTimePicker();
 	            		etTextAreaValue = (EditText) smScreen.getTextAreaValue();
 		        		imm.hideSoftInputFromWindow(etTextAreaValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 	            		llQuestion.addView(smScreen.MakeScreen());
@@ -249,7 +247,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 		        		smScreen.Text("Question number 3 DatePicker. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
 		        		smScreen.EmptySapce(20);
-		        		smScreen.DatePicker();
+//		        		smScreen.DatePicker();
 		        		llQuestion.addView(smScreen.MakeScreen());
 	        			contador++;
 	        			break;
@@ -261,7 +259,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 		        		smScreen.Text("Question number 4 PhoneInput");
 		        		smScreen.EmptySapce(20);
-		        		smScreen.PhoneInput();
+//		        		smScreen.PhoneInput();
 		        		etPhoneInputValue = (EditText) smScreen.getPhoneInputValue();
 		        		imm.hideSoftInputFromWindow(etPhoneInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 		        		llQuestion.addView(smScreen.MakeScreen());
@@ -274,7 +272,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 		        		smScreen.Text("Question number 5 DecimalNumberInput");
 		        		smScreen.EmptySapce(20);
-		        		smScreen.DecimalNumberInput();
+//		        		smScreen.DecimalNumberInput();
 		        		etNumberInputValue = (EditText) smScreen.getNumberInputValue();
 		        		//imm.hideSoftInputFromWindow(etNumberInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 		        		llQuestion.addView(smScreen.MakeScreen());
@@ -286,7 +284,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 		        		smScreen.Text("Question number 6 TextInput");
 		        		smScreen.EmptySapce(20);
-		        		smScreen.TextInput();
+//		        		smScreen.TextInput();
 		        		etTextInputValue = (EditText) smScreen.getTextInputValue();
 		        		imm.hideSoftInputFromWindow(etTextInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 		        		llQuestion.addView(smScreen.MakeScreen());		        		
@@ -298,7 +296,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 		        		smScreen.Text("Question number 7 Time");
 		        		smScreen.EmptySapce(20);
-		        		smScreen.TimePicker();
+//		        		smScreen.TimePicker();
 		        		etTextInputValue = (EditText) smScreen.getTextInputValue();
 		        		imm.hideSoftInputFromWindow(etTextInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 		        		llQuestion.addView(smScreen.MakeScreen());
@@ -310,7 +308,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 		        		smScreen.Text("Question number 8 DateTime");
 		        		smScreen.EmptySapce(20);
-		        		smScreen.DateTimePicker();
+//		        		smScreen.DateTimePicker();
 		        		llQuestion.addView(smScreen.MakeScreen());
 	        			contador++;
 	        			break;	
@@ -320,7 +318,7 @@ public class QuestionsActivity extends Activity {
 	        			smScreen.CleanScreen();
 		        		smScreen.Text("Question number 9 TextArea. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
 		        		smScreen.EmptySapce(20);
-		        		smScreen.TextArea();		      
+//		        		smScreen.TextArea();		      
 		        		etTextAreaValue = (EditText) smScreen.getTextAreaValue();
 		        		imm.hideSoftInputFromWindow(etTextAreaValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 		        		llQuestion.addView(smScreen.MakeScreen());
@@ -372,7 +370,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
-        		smScreen.TextArea();
+//        		smScreen.TextArea();
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -381,7 +379,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
-        		smScreen.DatePicker();
+//        		smScreen.DatePicker();
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -390,7 +388,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
-        		smScreen.TimePicker();         	
+//        		smScreen.TimePicker();         	
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -399,7 +397,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
-        		smScreen.DateTimePicker();
+//        		smScreen.DateTimePicker();
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -408,7 +406,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
-        		smScreen.TextInput();
+//        		smScreen.TextInput();
         		llQuestion.addView(smScreen.MakeScreen());		     
 				break; 
 				
@@ -417,7 +415,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
-        		smScreen.NumberInput();
+//        		smScreen.NumberInput();
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -426,7 +424,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text(sPreguntaWithVariableValue);
         		smScreen.EmptySapce(20);
-        		smScreen.PhoneInput();
+//        		smScreen.PhoneInput();
         		llQuestion.addView(smScreen.MakeScreen());
 				break;
 				
@@ -535,7 +533,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text("Question number 3 DatePicker. Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te.");
         		smScreen.EmptySapce(20);
-        		smScreen.DatePicker();
+//        		smScreen.DatePicker();
         		etPhoneInputValue = (EditText) smScreen.getPhoneInputValue();
         		imm.hideSoftInputFromWindow(etPhoneInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         		llQuestion.addView(smScreen.MakeScreen());
@@ -547,7 +545,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text("Question number 4 PhoneInput");
         		smScreen.EmptySapce(20);
-        		smScreen.PhoneInput();
+//        		smScreen.PhoneInput();
         		etPhoneInputValue = (EditText) smScreen.getPhoneInputValue();
         		imm.hideSoftInputFromWindow(etPhoneInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         		llQuestion.addView(smScreen.MakeScreen());
@@ -559,7 +557,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text("Question number 5 DecimalNumberInput");
         		smScreen.EmptySapce(20);
-        		smScreen.DecimalNumberInput();
+//        		smScreen.DecimalNumberInput();
         		etNumberInputValue = (EditText) smScreen.getNumberInputValue();
         		imm.hideSoftInputFromWindow(etNumberInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         		llQuestion.addView(smScreen.MakeScreen());
@@ -571,7 +569,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text("Question number 6 TextInput");
         		smScreen.EmptySapce(20);
-        		smScreen.TextInput();
+//        		smScreen.TextInput();
         		etTextInputValue = (EditText) smScreen.getTextInputValue();
         		imm.hideSoftInputFromWindow(etTextInputValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         		llQuestion.addView(smScreen.MakeScreen());
@@ -583,7 +581,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text("Question number 7 Time");
         		smScreen.EmptySapce(20);
-        		smScreen.TimePicker();
+//        		smScreen.TimePicker();
         		llQuestion.addView(smScreen.MakeScreen());
     			contador--;
     			break;	
@@ -593,7 +591,7 @@ public class QuestionsActivity extends Activity {
     			smScreen.CleanScreen();
         		smScreen.Text("Question number 8 DateTime");
         		smScreen.EmptySapce(20);
-        		smScreen.DateTimePicker();
+//        		smScreen.DateTimePicker();
         		etTextAreaValue = (EditText) smScreen.getTextAreaValue();
         		imm.hideSoftInputFromWindow(etTextAreaValue.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         		llQuestion.addView(smScreen.MakeScreen());

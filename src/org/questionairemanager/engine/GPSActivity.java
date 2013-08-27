@@ -1,6 +1,5 @@
 package org.questionairemanager.engine;
 
-import java.util.Iterator;
 import java.util.Locale;
 
 import org.questionairemanager.engine.utility.LoadingDialog;
@@ -13,8 +12,6 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.location.Criteria;
-import android.location.GpsSatellite;
-import android.location.GpsStatus;
 import android.location.GpsStatus.Listener;
 import android.location.GpsStatus.NmeaListener;
 import android.location.Location;
@@ -28,15 +25,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class GPSActivity extends Activity implements LocationListener {
 	
   ShowMessage showMsg = new ShowMessage();
-  private TextView tvLatitude, tvLongitude, tvAltitud, tvBearing, tvSpeed, tvGPSQuestion, tvTime, tvNMEAString, tvSatellite, tvAccuracy;
-  private RelativeLayout rlBearing;
+  private TextView tvLatitude, tvLongitude, tvAltitud, tvBearing, tvSpeed, tvTime, tvNMEAString, tvSatellite, tvAccuracy;
   private Button btnNext;
   private LocationManager locationManager;
   private String provider;
@@ -61,9 +56,6 @@ public class GPSActivity extends Activity implements LocationListener {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.gps_layout);
     
-    //IF GPS Activity is called from 
-    btnNext = (Button) findViewById(R.id.btnNextGps);
-    tvGPSQuestion = (TextView) findViewById(R.id.tvGPSQuestion);
     tvLatitude = (TextView) findViewById(R.id.tvLatitude);
     tvLongitude = (TextView) findViewById(R.id.tvLongitude);
     tvAltitud = (TextView) findViewById(R.id.tvAltitud);
@@ -71,26 +63,10 @@ public class GPSActivity extends Activity implements LocationListener {
     tvBearing = (TextView) findViewById(R.id.tvBearing);
     tvTime = (TextView) findViewById(R.id.tvTime);
     tvNMEAString = (TextView) findViewById(R.id.tvNMEAString);
-    tvSatellite = (TextView) findViewById(R.id.tvSatellite);
     tvAccuracy = (TextView) findViewById(R.id.tvAccuracy);
-    rlBearing = (RelativeLayout) findViewById(R.id.rlBearing);
     
     loader = new LoadingDialog(this);
-    
-    IdOrigin = Integer.parseInt(getIntent().getExtras().getString("IdOrigin"));
-    if(IdOrigin == 1){
-    	btnNext.setVisibility(View.VISIBLE);//0 means Visible
-    	rlBearing.setVisibility(View.INVISIBLE);
-    	tvGPSQuestion.setText("GPS Location Question for user to save GPS Data.");
-    }
-    if(IdOrigin == 0){
-    	btnNext.setVisibility(View.INVISIBLE);//1 means Invisible
-    	rlBearing.setVisibility(View.VISIBLE);
-    	tvGPSQuestion.setText("");
-    }
-           
-    
-    
+                    
     // Get the location manager
     locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);    
     // Define the criteria how to select the locatioin provider -> use
@@ -253,7 +229,7 @@ public class GPSActivity extends Activity implements LocationListener {
   		
       case R.id.menu_barcodereader:
       	Intent iIntentBarCode = new Intent(GPSActivity.this, BarCodeReaderActivity.class);
-      	iIntentBarCode.putExtra("IdOrigin", ""+0);
+      	iIntentBarCode.putExtra("IdOrigin", 0);
   		startActivity(iIntentBarCode);
   		return true;	
       
@@ -326,31 +302,22 @@ public class GPSActivity extends Activity implements LocationListener {
 	    }
   }
   
-  public void getNMEA(){
-//	  gpsSatsAvailable = 0; 
-	  locationManager.addNmeaListener(new NmeaListener() {		  
-		  
-          public void onNmeaReceived(long timestamp, String nmea) {
-              Log.d("NMEA", "nmea is: "+(nmea+=nmea));
-              tvNMEAString.setText(nmea);
-              if(nmea.toUpperCase().contains("$GNGSA") || nmea.toUpperCase().contains("$GPGSA")){
-            	  gpsSatsAvailable = gpsSatsAvailable +1;
-              }              
-          }});
+	public void getNMEA() {
+		// gpsSatsAvailable = 0;
+		locationManager.addNmeaListener(new NmeaListener() {
 
-  }
+			public void onNmeaReceived(long timestamp, String nmea) {
+				Log.d("NMEA", "nmea is: " + (nmea += nmea));
+				tvNMEAString.setText(nmea);
+				if (nmea.toUpperCase().contains("$GNGSA")
+						|| nmea.toUpperCase().contains("$GPGSA")) {
+					gpsSatsAvailable = gpsSatsAvailable + 1;
+				}
+			}
+		});
+
+	}
   
-  /*public void updateSats() {
-	    final GpsStatus gs = this.locationManager.getGpsStatus(null);
-	    int i = 0;
-	    final Iterator<GpsSatellite> it = gs.getSatellites().iterator();
-	    while( it.hasNext() ) {
-	        it.next();
-	        i += 1;
-	    }
-	    this.gpsSatsAvailable = i;
-	}*/
-
   /**
    * Listen to the location Change event from the Location Manager, and gets the GPS Info, and paint it on the Screen
    * @author Jose Cabrera <email>jose.cabrera@centrikal.com</email>
@@ -384,15 +351,6 @@ public class GPSActivity extends Activity implements LocationListener {
 	    gpsSatsAvailable = 0;
 	    loader.stopSpinnerLoading();
   }
-  
-  /*public void onGpsStatusChanged(final int event) {
-      switch( event ) {
-      
-      case GpsStatus.GPS_EVENT_SATELLITE_STATUS:
-          updateSats();
-          break;
-      }
-  }*/
   
   public void onNmeaReceived(long timestamp, String nmea) 
   {	      

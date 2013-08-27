@@ -21,7 +21,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="NS-QSet1-Que1"
+                    android:text="@string/ns_qset1_que1"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <TextView
