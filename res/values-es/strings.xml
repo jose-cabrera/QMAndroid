@@ -73,4 +73,25 @@
     <string name="time">Tiempo:</string>
     <string name="nmea">NMEA:</string>
     <string name="satellite">Satelite:</string>
+    <string name="accuracy_">Presición:</string>
+    <string name="satelites_">Satelites:</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="laitude">laitud</string>
+    <string name="longitude">longitud</string>
+    <string name="altitud">altitud</string>
+    <string name="speed">velocidad</string>
+    <string name="bearing">rumbo</string>
+    <string name="accuracy">presición</string>
+    <string name="timemin">tiempo</string>
+    <string name="accept">Aceptar</string>
+    <string name="bar_code_reader">Lector de Codigo de Barras</string>
+    <string name="helpText">\?</string>
+    <string name="getting_your_position">Obteniendo su posición</string>
+    <string name="getting_your_altitud">Obteniendo su altitud</string>
+    <string name="getting_accuracy">Obteniendo Precisión</string>
+    <string name="content">Contenido</string>
+    <string name="format">Formato</string>
+    <string name="no_accuracy">Sin presición</string>
+    <string name="_meters"> metros</string>
+    <string name="press_get_position">Presione Obtener Posición</string>
 </resources>

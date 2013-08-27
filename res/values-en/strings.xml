@@ -77,6 +77,31 @@
     <string name="tap_the_screen_to_begin_qm">Tap the Screen to Begin QM</string>
     <string name="time">Time:</string>
     <string name="nmea">NMEA:</string>
-    <string name="satellite">Satellite:</string>
+    <string name="satellite">satellite</string>
+    <string name="accuracy_">Accuraccy:</string>
+    <string name="satelites_">Satellites:</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="laitude">laitude</string>
+    <string name="longitude">longitude</string>
+    <string name="altitud">altitud</string>
+    <string name="speed">speed</string>
+    <string name="bearing">bearing</string>
+    <string name="accuracy">accuraccy</string>
+    <string name="timemin">time</string>
+    <string name="accept">Accept</string>
+    <string name="bar_code_reader">Bar Code Reader</string>
+    <string name="helpText">\?</string>
+    <string name="getting_your_position">Getting your position</string>
+    <string name="getting_your_altitud">Getting your Altitud</string>
+    <string name="getting_your_bearing">Getting your Bearing</string>
+    <string name="getting_your_speed">Getting your Speed</string>
+    <string name="getting_accuracy">Getting Accuracy</string>
+    <string name="getting_nmea">Getting NMEA</string>
+    <string name="ns_qset1_que1">NS-QSet1-Que1</string>
+    <string name="content">Content</string>
+    <string name="format">Format</string>
+    <string name="no_accuracy">No Accuraccy</string>
+    <string name="_meters"> meters</string>
+    <string name="press_get_position">Press Get Position</string>
 
 </resources>

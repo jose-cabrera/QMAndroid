@@ -78,7 +78,7 @@
     <string name="time">Time:</string>
     <string name="nmea">NMEA:</string>
     <string name="satellite">satellite</string>
-    <string name="accuracy_">Accuracy:</string>
+    <string name="accuracy_">Accuraccy:</string>
     <string name="satelites_">Satellites:</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="laitude">laitude</string>
@@ -86,7 +86,7 @@
     <string name="altitud">altitud</string>
     <string name="speed">speed</string>
     <string name="bearing">bearing</string>
-    <string name="accuracy">accuracy</string>
+    <string name="accuracy">accuraccy</string>
     <string name="timemin">time</string>
     <string name="accept">Accept</string>
     <string name="bar_code_reader">Bar Code Reader</string>
@@ -100,7 +100,7 @@
     <string name="ns_qset1_que1">NS-QSet1-Que1</string>
     <string name="content">Content</string>
     <string name="format">Format</string>
-    <string name="no_accuracy">No Accuracy</string>
+    <string name="no_accuracy">No Accuraccy</string>
     <string name="_meters"> meters</string>
     <string name="press_get_position">Press Get Position</string>
 

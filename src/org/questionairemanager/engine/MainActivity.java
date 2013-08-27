@@ -2,8 +2,8 @@ package org.questionairemanager.engine;
 
 import java.util.Locale;
 
-import org.questionairemanager.engine.utility.ScreenManager;
-import org.questionairemanager.engine.utility.ShowMessage;
+import org.questionnairemanager.engine.utility.ScreenManager;
+import org.questionnairemanager.engine.utility.ShowMessage;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -158,6 +158,8 @@ public class MainActivity extends Activity implements OnClickListener {
 				
 			case 8:
 				llQuestion.removeAllViewsInLayout();
+				Answered = new String[1];
+				Answered[0] = "2515135123";
 				llQuestion.addView(smScreenManager.drawScreen(ScreenManager.PHONEINPUT, legalValues,
 						MainText, HelpText, Answered, AnsweredIndex));
 				count++;
@@ -175,6 +177,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				
 			case 10:
 				llQuestion.removeAllViewsInLayout();
+				Answered[0] = "jdhfkjashdghashgdsagadhgjkadkjghakjdshdghasdhgjkashdgjkhasdkjghakjsdhgkjashdg";
 				llQuestion.addView(smScreenManager.drawScreen(ScreenManager.TEXTAREA, legalValues,
 						MainText, HelpText, Answered, AnsweredIndex));
 				count++;
@@ -182,6 +185,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				
 			case 11:
 				llQuestion.removeAllViewsInLayout();
+				Answered[0] = "jdhfkjashdghashgdsagadhgkjashdg";
 				llQuestion.addView(smScreenManager.drawScreen(ScreenManager.TEXTBOX, legalValues,
 						MainText, HelpText, Answered, AnsweredIndex));
 				count++;
@@ -189,6 +193,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				
 			case 12:		
 				llQuestion.removeAllViewsInLayout();
+				Answered = null;
 				llQuestion.addView(smScreenManager.drawScreen(ScreenManager.TIME, legalValues,
 						MainText, HelpText, Answered, AnsweredIndex));
 				count++;
